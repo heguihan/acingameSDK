@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/HGHDevice/HGHDeviceReport.m"
+            timestampString = "596714615.110103"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "+HGHreportDeviceInfo:ename:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[HGHDeviceReport HGHreportDeviceInfo:ename:]"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/HGHDevice/HGHDeviceReport.m"
+                  timestampString = "596714615.127753"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1776">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45+[HGHDeviceReport HGHreportDeviceInfo:ename:]_block_invoke"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/HGHDevice/HGHDeviceReport.m"
+                  timestampString = "596714615.12983"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
