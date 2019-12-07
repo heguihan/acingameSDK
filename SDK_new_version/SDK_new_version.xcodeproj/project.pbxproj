@@ -74,6 +74,7 @@
 		A08EF9DF239646CB00A0F187 /* HGHbaseUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EF9DE239646CB00A0F187 /* HGHbaseUILabel.m */; };
 		A08EF9E323964A5600A0F187 /* HGHAccountLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EF9E223964A5600A0F187 /* HGHAccountLogin.m */; };
 		A0967B6D239B8FA600E9038E /* HGHGuestBindPhoneNO.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */; };
+		A0967B71239BB1B200E9038E /* HGHGetOrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B70239BB1B200E9038E /* HGHGetOrderManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +198,8 @@
 		A08EF9E223964A5600A0F187 /* HGHAccountLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHAccountLogin.m; sourceTree = "<group>"; };
 		A0967B6B239B8FA600E9038E /* HGHGuestBindPhoneNO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHGuestBindPhoneNO.h; sourceTree = "<group>"; };
 		A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHGuestBindPhoneNO.m; sourceTree = "<group>"; };
+		A0967B6F239BB1B200E9038E /* HGHGetOrderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHGetOrderManager.h; sourceTree = "<group>"; };
+		A0967B70239BB1B200E9038E /* HGHGetOrderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHGetOrderManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +311,7 @@
 		A063D61123911B3500D6D710 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A0967B6E239BB19700E9038E /* GetOrder */,
 				A08EF9E0239648E300A0F187 /* LoginUI */,
 				A063D61223911B3500D6D710 /* HGHMainView.h */,
 				A063D61323911B3500D6D710 /* HGHMainView.m */,
@@ -536,6 +540,15 @@
 			path = LoginUI;
 			sourceTree = "<group>";
 		};
+		A0967B6E239BB19700E9038E /* GetOrder */ = {
+			isa = PBXGroup;
+			children = (
+				A0967B6F239BB1B200E9038E /* HGHGetOrderManager.h */,
+				A0967B70239BB1B200E9038E /* HGHGetOrderManager.m */,
+			);
+			path = GetOrder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -647,6 +660,7 @@
 				A01790A3239601FE00DF0E42 /* HGHPandas.m in Sources */,
 				A082DBBB239A6DD100777927 /* IQBarButtonItem.m in Sources */,
 				A082DBC1239A6DD100777927 /* IQUITextFieldView+Additions.m in Sources */,
+				A0967B71239BB1B200E9038E /* HGHGetOrderManager.m in Sources */,
 				A082DBC5239A6DD100777927 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A063D63C239122D100D6D710 /* HGHDevice.m in Sources */,
 				A082DBBA239A6DD100777927 /* IQTitleBarButtonItem.m in Sources */,

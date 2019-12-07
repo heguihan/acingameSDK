@@ -86,7 +86,7 @@
     self.baseView.backgroundColor = [UIColor grayColor];
     [currentVC.view addSubview:self.baseView];
     
-    [[HGHBindPhoneNO shareInstance] showChangePwdView];
+    [[HGHBindPhoneNO shareInstance] showAccountBindView];
 }
 -(void)showGuestBindView
 {
@@ -122,7 +122,7 @@
     NSLog(@"游客登录");
 //    [[HGHPhoneLogin shareInstance] showPhoneLogin];
 //    [[HGHPhoneRegister shareInstance] showPhoneRegister];
-    [[HGHBindPhoneNO shareInstance] showChangePwdView];
+    [[HGHBindPhoneNO shareInstance] showAccountBindView];
 }
 
 -(void)accountlogin

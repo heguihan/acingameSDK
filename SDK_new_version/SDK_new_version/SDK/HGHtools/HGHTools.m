@@ -94,6 +94,7 @@
 }
 +(NSString *)getCurrentUserID
 {
+    //pandasUserID
     NSString *currentUserID = [[NSUserDefaults standardUserDefaults] objectForKey:@"pandasUserID"];
     return currentUserID;
     
