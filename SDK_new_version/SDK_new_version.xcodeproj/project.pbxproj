@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A017909D2396003300DF0E42 /* HGHPandas.plist in Resources */ = {isa = PBXBuildFile; fileRef = A017909C2396003300DF0E42 /* HGHPandas.plist */; };
+		A01790A3239601FE00DF0E42 /* HGHPandas.m in Sources */ = {isa = PBXBuildFile; fileRef = A01790A2239601FE00DF0E42 /* HGHPandas.m */; };
+		A01790A7239607D700DF0E42 /* HGHUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A01790A6239607D700DF0E42 /* HGHUIConfig.m */; };
+		A061D8E8239933AF00CF9DD8 /* hgh_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8DD239933AE00CF9DD8 /* hgh_phone.png */; };
+		A061D8E9239933AF00CF9DD8 /* hgh_bigBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8DE239933AF00CF9DD8 /* hgh_bigBtn.png */; };
+		A061D8EA239933AF00CF9DD8 /* hgh_close.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8DF239933AF00CF9DD8 /* hgh_close.png */; };
+		A061D8EB239933AF00CF9DD8 /* hgh_fastlogin.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E0239933AF00CF9DD8 /* hgh_fastlogin.png */; };
+		A061D8EC239933AF00CF9DD8 /* hgh_goback.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E1239933AF00CF9DD8 /* hgh_goback.png */; };
+		A061D8ED239933AF00CF9DD8 /* hgh_longwhiteBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E2239933AF00CF9DD8 /* hgh_longwhiteBtn.png */; };
+		A061D8EE239933AF00CF9DD8 /* hgh_accountlogin.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E3239933AF00CF9DD8 /* hgh_accountlogin.png */; };
+		A061D8EF239933AF00CF9DD8 /* hgh_longBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E4239933AF00CF9DD8 /* hgh_longBtn.png */; };
+		A061D8F0239933AF00CF9DD8 /* hgh_line.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E5239933AF00CF9DD8 /* hgh_line.png */; };
+		A061D8F1239933AF00CF9DD8 /* hgh_waring.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E6239933AF00CF9DD8 /* hgh_waring.png */; };
+		A061D8F2239933AF00CF9DD8 /* hgh_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8E7239933AF00CF9DD8 /* hgh_background.png */; };
 		A063D5F923911B0000D6D710 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D5F823911B0000D6D710 /* AppDelegate.m */; };
 		A063D5FC23911B0000D6D710 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D5FB23911B0000D6D710 /* ViewController.m */; };
 		A063D5FF23911B0000D6D710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A063D5FD23911B0000D6D710 /* Main.storyboard */; };
@@ -23,9 +37,63 @@
 		A063D63B239122D100D6D710 /* QWERReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D636239122D100D6D710 /* QWERReachability.m */; };
 		A063D63C239122D100D6D710 /* HGHDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D638239122D100D6D710 /* HGHDevice.m */; };
 		A063D6402391271300D6D710 /* HGHFunctionHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D63F2391271300D6D710 /* HGHFunctionHttp.m */; };
+		A063D6442394A76100D6D710 /* HGHUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D6432394A76100D6D710 /* HGHUserInfo.m */; };
+		A063D6472394A7CF00D6D710 /* HGHDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D6462394A7CF00D6D710 /* HGHDeviceInfo.m */; };
+		A063D64A2394A85100D6D710 /* HGHOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A063D6492394A85100D6D710 /* HGHOrderInfo.m */; };
+		A068A88B239608B200C0BA6E /* HGHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A068A88A239608B200C0BA6E /* HGHTest.m */; };
+		A07C32A523992F82007B1F56 /* HGHChangePwd.m in Sources */ = {isa = PBXBuildFile; fileRef = A07C32A423992F82007B1F56 /* HGHChangePwd.m */; };
+		A082DB87239A139E00777927 /* hgh_testPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = A082DB86239A139E00777927 /* hgh_testPhone.png */; };
+		A082DB8E239A4AB700777927 /* HGHBindPhoneNO.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DB8D239A4AB700777927 /* HGHBindPhoneNO.m */; };
+		A082DB91239A4CA700777927 /* HGHRenzheng.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DB90239A4CA700777927 /* HGHRenzheng.m */; };
+		A082DB93239A5F7600777927 /* hgh_nonoticeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A082DB92239A5F7600777927 /* hgh_nonoticeBtn.png */; };
+		A082DBB8239A6DD100777927 /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DB97239A6DD100777927 /* IQTextView.m */; };
+		A082DBB9239A6DD100777927 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DB9B239A6DD100777927 /* IQToolbar.m */; };
+		A082DBBA239A6DD100777927 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DB9D239A6DD100777927 /* IQTitleBarButtonItem.m */; };
+		A082DBBB239A6DD100777927 /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DB9E239A6DD100777927 /* IQBarButtonItem.m */; };
+		A082DBBC239A6DD100777927 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DB9F239A6DD100777927 /* IQUIView+IQKeyboardToolbar.m */; };
+		A082DBBD239A6DD100777927 /* IQPreviousNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBA0239A6DD100777927 /* IQPreviousNextView.m */; };
+		A082DBBE239A6DD100777927 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A082DBA8239A6DD100777927 /* IQKeyboardManager.bundle */; };
+		A082DBBF239A6DD100777927 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBAB239A6DD100777927 /* IQKeyboardManager.m */; };
+		A082DBC0239A6DD100777927 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBAD239A6DD100777927 /* IQNSArray+Sort.m */; };
+		A082DBC1239A6DD100777927 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBAF239A6DD100777927 /* IQUITextFieldView+Additions.m */; };
+		A082DBC2239A6DD100777927 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBB0239A6DD100777927 /* IQUIScrollView+Additions.m */; };
+		A082DBC3239A6DD100777927 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBB1239A6DD100777927 /* IQUIView+Hierarchy.m */; };
+		A082DBC4239A6DD100777927 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBB5239A6DD100777927 /* IQUIViewController+Additions.m */; };
+		A082DBC5239A6DD100777927 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A082DBB7239A6DD100777927 /* IQKeyboardReturnKeyHandler.m */; };
+		A08EEDBB23965A55007A604B /* HGHbaseUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDBA23965A54007A604B /* HGHbaseUIImageView.m */; };
+		A08EEDBE23966010007A604B /* HGHAccountRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDBD23966010007A604B /* HGHAccountRegister.m */; };
+		A08EEDC123966230007A604B /* HGHPhoneLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDC023966230007A604B /* HGHPhoneLogin.m */; };
+		A08EEDC4239663D6007A604B /* HGHPhoneRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDC3239663D6007A604B /* HGHPhoneRegister.m */; };
+		A08EEDC823967602007A604B /* HGHAlertview.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDC623967602007A604B /* HGHAlertview.m */; };
+		A08EEDCC2396768F007A604B /* HGHregular.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDCB2396768F007A604B /* HGHregular.m */; };
+		A08EEDCF23968206007A604B /* HGHSDKConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDCE23968206007A604B /* HGHSDKConfig.m */; };
+		A08EEDD323975AA0007A604B /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDD123975AA0007A604B /* RSA.m */; };
+		A08EEDD723978822007A604B /* HGHResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EEDD623978822007A604B /* HGHResponse.m */; };
+		A08EF9D9239646A300A0F187 /* HGHbaseUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EF9D8239646A300A0F187 /* HGHbaseUITextField.m */; };
+		A08EF9DC239646B900A0F187 /* HGHbaseUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EF9DB239646B900A0F187 /* HGHbaseUIButton.m */; };
+		A08EF9DF239646CB00A0F187 /* HGHbaseUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EF9DE239646CB00A0F187 /* HGHbaseUILabel.m */; };
+		A08EF9E323964A5600A0F187 /* HGHAccountLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EF9E223964A5600A0F187 /* HGHAccountLogin.m */; };
+		A0967B6D239B8FA600E9038E /* HGHGuestBindPhoneNO.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A017909C2396003300DF0E42 /* HGHPandas.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HGHPandas.plist; sourceTree = "<group>"; };
+		A01790A1239601FE00DF0E42 /* HGHPandas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHPandas.h; sourceTree = "<group>"; };
+		A01790A2239601FE00DF0E42 /* HGHPandas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHPandas.m; sourceTree = "<group>"; };
+		A01790A4239607B100DF0E42 /* HGHPandas.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHPandas.pch; sourceTree = "<group>"; };
+		A01790A5239607D700DF0E42 /* HGHUIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHUIConfig.h; sourceTree = "<group>"; };
+		A01790A6239607D700DF0E42 /* HGHUIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHUIConfig.m; sourceTree = "<group>"; };
+		A061D8DD239933AE00CF9DD8 /* hgh_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_phone.png; sourceTree = "<group>"; };
+		A061D8DE239933AF00CF9DD8 /* hgh_bigBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_bigBtn.png; sourceTree = "<group>"; };
+		A061D8DF239933AF00CF9DD8 /* hgh_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_close.png; sourceTree = "<group>"; };
+		A061D8E0239933AF00CF9DD8 /* hgh_fastlogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_fastlogin.png; sourceTree = "<group>"; };
+		A061D8E1239933AF00CF9DD8 /* hgh_goback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_goback.png; sourceTree = "<group>"; };
+		A061D8E2239933AF00CF9DD8 /* hgh_longwhiteBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_longwhiteBtn.png; sourceTree = "<group>"; };
+		A061D8E3239933AF00CF9DD8 /* hgh_accountlogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_accountlogin.png; sourceTree = "<group>"; };
+		A061D8E4239933AF00CF9DD8 /* hgh_longBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_longBtn.png; sourceTree = "<group>"; };
+		A061D8E5239933AF00CF9DD8 /* hgh_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_line.png; sourceTree = "<group>"; };
+		A061D8E6239933AF00CF9DD8 /* hgh_waring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_waring.png; sourceTree = "<group>"; };
+		A061D8E7239933AF00CF9DD8 /* hgh_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_background.png; sourceTree = "<group>"; };
 		A063D5F423911B0000D6D710 /* SDK_new_version.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDK_new_version.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A063D5F723911B0000D6D710 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A063D5F823911B0000D6D710 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +124,79 @@
 		A063D638239122D100D6D710 /* HGHDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHDevice.m; sourceTree = "<group>"; };
 		A063D63E2391271300D6D710 /* HGHFunctionHttp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHFunctionHttp.h; sourceTree = "<group>"; };
 		A063D63F2391271300D6D710 /* HGHFunctionHttp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHFunctionHttp.m; sourceTree = "<group>"; };
+		A063D6422394A76100D6D710 /* HGHUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHUserInfo.h; sourceTree = "<group>"; };
+		A063D6432394A76100D6D710 /* HGHUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHUserInfo.m; sourceTree = "<group>"; };
+		A063D6452394A7CF00D6D710 /* HGHDeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHDeviceInfo.h; sourceTree = "<group>"; };
+		A063D6462394A7CF00D6D710 /* HGHDeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHDeviceInfo.m; sourceTree = "<group>"; };
+		A063D6482394A85100D6D710 /* HGHOrderInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHOrderInfo.h; sourceTree = "<group>"; };
+		A063D6492394A85100D6D710 /* HGHOrderInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHOrderInfo.m; sourceTree = "<group>"; };
+		A068A889239608B200C0BA6E /* HGHTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHTest.h; sourceTree = "<group>"; };
+		A068A88A239608B200C0BA6E /* HGHTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHTest.m; sourceTree = "<group>"; };
+		A07C32A323992F82007B1F56 /* HGHChangePwd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHChangePwd.h; sourceTree = "<group>"; };
+		A07C32A423992F82007B1F56 /* HGHChangePwd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHChangePwd.m; sourceTree = "<group>"; };
+		A082DB86239A139E00777927 /* hgh_testPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_testPhone.png; sourceTree = "<group>"; };
+		A082DB8C239A4AB700777927 /* HGHBindPhoneNO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHBindPhoneNO.h; sourceTree = "<group>"; };
+		A082DB8D239A4AB700777927 /* HGHBindPhoneNO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHBindPhoneNO.m; sourceTree = "<group>"; };
+		A082DB8F239A4CA700777927 /* HGHRenzheng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHRenzheng.h; sourceTree = "<group>"; };
+		A082DB90239A4CA700777927 /* HGHRenzheng.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHRenzheng.m; sourceTree = "<group>"; };
+		A082DB92239A5F7600777927 /* hgh_nonoticeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_nonoticeBtn.png; sourceTree = "<group>"; };
+		A082DB97239A6DD100777927 /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
+		A082DB98239A6DD100777927 /* IQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
+		A082DB9A239A6DD100777927 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		A082DB9B239A6DD100777927 /* IQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
+		A082DB9C239A6DD100777927 /* IQPreviousNextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQPreviousNextView.h; sourceTree = "<group>"; };
+		A082DB9D239A6DD100777927 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		A082DB9E239A6DD100777927 /* IQBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQBarButtonItem.m; sourceTree = "<group>"; };
+		A082DB9F239A6DD100777927 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		A082DBA0239A6DD100777927 /* IQPreviousNextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQPreviousNextView.m; sourceTree = "<group>"; };
+		A082DBA1239A6DD100777927 /* IQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
+		A082DBA2239A6DD100777927 /* IQBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQBarButtonItem.h; sourceTree = "<group>"; };
+		A082DBA3239A6DD100777927 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		A082DBA5239A6DD100777927 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		A082DBA6239A6DD100777927 /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		A082DBA8239A6DD100777927 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		A082DBA9239A6DD100777927 /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		A082DBAA239A6DD100777927 /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		A082DBAB239A6DD100777927 /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		A082DBAD239A6DD100777927 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		A082DBAE239A6DD100777927 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		A082DBAF239A6DD100777927 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		A082DBB0239A6DD100777927 /* IQUIScrollView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIScrollView+Additions.m"; sourceTree = "<group>"; };
+		A082DBB1239A6DD100777927 /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		A082DBB2239A6DD100777927 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		A082DBB3239A6DD100777927 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
+		A082DBB4239A6DD100777927 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		A082DBB5239A6DD100777927 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		A082DBB6239A6DD100777927 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		A082DBB7239A6DD100777927 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		A08EEDB923965A54007A604B /* HGHbaseUIImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHbaseUIImageView.h; sourceTree = "<group>"; };
+		A08EEDBA23965A54007A604B /* HGHbaseUIImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHbaseUIImageView.m; sourceTree = "<group>"; };
+		A08EEDBC23966010007A604B /* HGHAccountRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHAccountRegister.h; sourceTree = "<group>"; };
+		A08EEDBD23966010007A604B /* HGHAccountRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHAccountRegister.m; sourceTree = "<group>"; };
+		A08EEDBF23966230007A604B /* HGHPhoneLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHPhoneLogin.h; sourceTree = "<group>"; };
+		A08EEDC023966230007A604B /* HGHPhoneLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHPhoneLogin.m; sourceTree = "<group>"; };
+		A08EEDC2239663D6007A604B /* HGHPhoneRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHPhoneRegister.h; sourceTree = "<group>"; };
+		A08EEDC3239663D6007A604B /* HGHPhoneRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHPhoneRegister.m; sourceTree = "<group>"; };
+		A08EEDC623967602007A604B /* HGHAlertview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHAlertview.m; sourceTree = "<group>"; };
+		A08EEDC723967602007A604B /* HGHAlertview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHAlertview.h; sourceTree = "<group>"; };
+		A08EEDCA2396768F007A604B /* HGHregular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHregular.h; sourceTree = "<group>"; };
+		A08EEDCB2396768F007A604B /* HGHregular.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHregular.m; sourceTree = "<group>"; };
+		A08EEDCD23968206007A604B /* HGHSDKConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHSDKConfig.h; sourceTree = "<group>"; };
+		A08EEDCE23968206007A604B /* HGHSDKConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHSDKConfig.m; sourceTree = "<group>"; };
+		A08EEDD123975AA0007A604B /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		A08EEDD223975AA0007A604B /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		A08EEDD523978821007A604B /* HGHResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHResponse.h; sourceTree = "<group>"; };
+		A08EEDD623978822007A604B /* HGHResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHResponse.m; sourceTree = "<group>"; };
+		A08EF9D7239646A300A0F187 /* HGHbaseUITextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHbaseUITextField.h; sourceTree = "<group>"; };
+		A08EF9D8239646A300A0F187 /* HGHbaseUITextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHbaseUITextField.m; sourceTree = "<group>"; };
+		A08EF9DA239646B900A0F187 /* HGHbaseUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHbaseUIButton.h; sourceTree = "<group>"; };
+		A08EF9DB239646B900A0F187 /* HGHbaseUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHbaseUIButton.m; sourceTree = "<group>"; };
+		A08EF9DD239646CB00A0F187 /* HGHbaseUILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHbaseUILabel.h; sourceTree = "<group>"; };
+		A08EF9DE239646CB00A0F187 /* HGHbaseUILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHbaseUILabel.m; sourceTree = "<group>"; };
+		A08EF9E123964A5600A0F187 /* HGHAccountLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHAccountLogin.h; sourceTree = "<group>"; };
+		A08EF9E223964A5600A0F187 /* HGHAccountLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHAccountLogin.m; sourceTree = "<group>"; };
+		A0967B6B239B8FA600E9038E /* HGHGuestBindPhoneNO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHGuestBindPhoneNO.h; sourceTree = "<group>"; };
+		A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHGuestBindPhoneNO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +210,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A017909B2396001200DF0E42 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A017909C2396003300DF0E42 /* HGHPandas.plist */,
+				A01790A4239607B100DF0E42 /* HGHPandas.pch */,
+				A01790A5239607D700DF0E42 /* HGHUIConfig.h */,
+				A01790A6239607D700DF0E42 /* HGHUIConfig.m */,
+				A08EEDCD23968206007A604B /* HGHSDKConfig.h */,
+				A08EEDCE23968206007A604B /* HGHSDKConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A017909E239600CF00DF0E42 /* 接口 */ = {
+			isa = PBXGroup;
+			children = (
+				A01790A1239601FE00DF0E42 /* HGHPandas.h */,
+				A01790A2239601FE00DF0E42 /* HGHPandas.m */,
+			);
+			path = "接口";
+			sourceTree = "<group>";
+		};
 		A063D5EB23911B0000D6D710 = {
 			isa = PBXGroup;
 			children = (
@@ -88,11 +251,14 @@
 		A063D5F623911B0000D6D710 /* SDK_new_version */ = {
 			isa = PBXGroup;
 			children = (
+				A07C32A023992696007B1F56 /* image */,
 				A063D60D23911B3500D6D710 /* SDK */,
 				A063D5F723911B0000D6D710 /* AppDelegate.h */,
 				A063D5F823911B0000D6D710 /* AppDelegate.m */,
 				A063D5FA23911B0000D6D710 /* ViewController.h */,
 				A063D5FB23911B0000D6D710 /* ViewController.m */,
+				A068A889239608B200C0BA6E /* HGHTest.h */,
+				A068A88A239608B200C0BA6E /* HGHTest.m */,
 				A063D5FD23911B0000D6D710 /* Main.storyboard */,
 				A063D60023911B0100D6D710 /* Assets.xcassets */,
 				A063D60223911B0100D6D710 /* LaunchScreen.storyboard */,
@@ -105,6 +271,13 @@
 		A063D60D23911B3500D6D710 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				A082DB94239A6DC100777927 /* ToolSDK */,
+				A08EEDD023975A90007A604B /* RSA */,
+				A08EEDC923967651007A604B /* 正则 */,
+				A08EEDC5239675D1007A604B /* 提示框 */,
+				A017909E239600CF00DF0E42 /* 接口 */,
+				A017909B2396001200DF0E42 /* Config */,
+				A063D6412394A74000D6D710 /* Model */,
 				A063D63D239126C300D6D710 /* 业务HTTP */,
 				A063D62F239122D100D6D710 /* HGHDevice */,
 				A063D61A23911C9A00D6D710 /* HTTPRequest */,
@@ -120,6 +293,14 @@
 			children = (
 				A063D60F23911B3500D6D710 /* HGHBaseview.h */,
 				A063D61023911B3500D6D710 /* HGHBaseview.m */,
+				A08EF9D7239646A300A0F187 /* HGHbaseUITextField.h */,
+				A08EF9D8239646A300A0F187 /* HGHbaseUITextField.m */,
+				A08EF9DA239646B900A0F187 /* HGHbaseUIButton.h */,
+				A08EF9DB239646B900A0F187 /* HGHbaseUIButton.m */,
+				A08EF9DD239646CB00A0F187 /* HGHbaseUILabel.h */,
+				A08EF9DE239646CB00A0F187 /* HGHbaseUILabel.m */,
+				A08EEDB923965A54007A604B /* HGHbaseUIImageView.h */,
+				A08EEDBA23965A54007A604B /* HGHbaseUIImageView.m */,
 			);
 			path = HGHBaseView;
 			sourceTree = "<group>";
@@ -127,6 +308,7 @@
 		A063D61123911B3500D6D710 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A08EF9E0239648E300A0F187 /* LoginUI */,
 				A063D61223911B3500D6D710 /* HGHMainView.h */,
 				A063D61323911B3500D6D710 /* HGHMainView.m */,
 			);
@@ -138,6 +320,8 @@
 			children = (
 				A063D61523911B3500D6D710 /* HGHTools.m */,
 				A063D61623911B3500D6D710 /* HGHTools.h */,
+				A08EEDD523978821007A604B /* HGHResponse.h */,
+				A08EEDD623978822007A604B /* HGHResponse.m */,
 			);
 			path = HGHtools;
 			sourceTree = "<group>";
@@ -183,6 +367,173 @@
 				A063D63F2391271300D6D710 /* HGHFunctionHttp.m */,
 			);
 			path = "业务HTTP";
+			sourceTree = "<group>";
+		};
+		A063D6412394A74000D6D710 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A063D6422394A76100D6D710 /* HGHUserInfo.h */,
+				A063D6432394A76100D6D710 /* HGHUserInfo.m */,
+				A063D6452394A7CF00D6D710 /* HGHDeviceInfo.h */,
+				A063D6462394A7CF00D6D710 /* HGHDeviceInfo.m */,
+				A063D6482394A85100D6D710 /* HGHOrderInfo.h */,
+				A063D6492394A85100D6D710 /* HGHOrderInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A07C32A023992696007B1F56 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A061D8E3239933AF00CF9DD8 /* hgh_accountlogin.png */,
+				A061D8E7239933AF00CF9DD8 /* hgh_background.png */,
+				A061D8DE239933AF00CF9DD8 /* hgh_bigBtn.png */,
+				A061D8DF239933AF00CF9DD8 /* hgh_close.png */,
+				A061D8E0239933AF00CF9DD8 /* hgh_fastlogin.png */,
+				A061D8E1239933AF00CF9DD8 /* hgh_goback.png */,
+				A082DB92239A5F7600777927 /* hgh_nonoticeBtn.png */,
+				A061D8E5239933AF00CF9DD8 /* hgh_line.png */,
+				A061D8E4239933AF00CF9DD8 /* hgh_longBtn.png */,
+				A061D8E2239933AF00CF9DD8 /* hgh_longwhiteBtn.png */,
+				A082DB86239A139E00777927 /* hgh_testPhone.png */,
+				A061D8DD239933AE00CF9DD8 /* hgh_phone.png */,
+				A061D8E6239933AF00CF9DD8 /* hgh_waring.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		A082DB94239A6DC100777927 /* ToolSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A082DB95239A6DD100777927 /* IQKeyboardManager */,
+			);
+			path = ToolSDK;
+			sourceTree = "<group>";
+		};
+		A082DB95239A6DD100777927 /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				A082DB96239A6DD100777927 /* IQTextView */,
+				A082DB99239A6DD100777927 /* IQToolbar */,
+				A082DBA4239A6DD100777927 /* Constants */,
+				A082DBA7239A6DD100777927 /* Resources */,
+				A082DBA9239A6DD100777927 /* IQKeyboardReturnKeyHandler.h */,
+				A082DBAA239A6DD100777927 /* IQKeyboardManager.h */,
+				A082DBAB239A6DD100777927 /* IQKeyboardManager.m */,
+				A082DBAC239A6DD100777927 /* Categories */,
+				A082DBB7239A6DD100777927 /* IQKeyboardReturnKeyHandler.m */,
+			);
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
+		A082DB96239A6DD100777927 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				A082DB97239A6DD100777927 /* IQTextView.m */,
+				A082DB98239A6DD100777927 /* IQTextView.h */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		A082DB99239A6DD100777927 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				A082DB9A239A6DD100777927 /* IQUIView+IQKeyboardToolbar.h */,
+				A082DB9B239A6DD100777927 /* IQToolbar.m */,
+				A082DB9C239A6DD100777927 /* IQPreviousNextView.h */,
+				A082DB9D239A6DD100777927 /* IQTitleBarButtonItem.m */,
+				A082DB9E239A6DD100777927 /* IQBarButtonItem.m */,
+				A082DB9F239A6DD100777927 /* IQUIView+IQKeyboardToolbar.m */,
+				A082DBA0239A6DD100777927 /* IQPreviousNextView.m */,
+				A082DBA1239A6DD100777927 /* IQToolbar.h */,
+				A082DBA2239A6DD100777927 /* IQBarButtonItem.h */,
+				A082DBA3239A6DD100777927 /* IQTitleBarButtonItem.h */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		A082DBA4239A6DD100777927 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A082DBA5239A6DD100777927 /* IQKeyboardManagerConstantsInternal.h */,
+				A082DBA6239A6DD100777927 /* IQKeyboardManagerConstants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A082DBA7239A6DD100777927 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A082DBA8239A6DD100777927 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A082DBAC239A6DD100777927 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A082DBAD239A6DD100777927 /* IQNSArray+Sort.m */,
+				A082DBAE239A6DD100777927 /* IQUIViewController+Additions.h */,
+				A082DBAF239A6DD100777927 /* IQUITextFieldView+Additions.m */,
+				A082DBB0239A6DD100777927 /* IQUIScrollView+Additions.m */,
+				A082DBB1239A6DD100777927 /* IQUIView+Hierarchy.m */,
+				A082DBB2239A6DD100777927 /* IQNSArray+Sort.h */,
+				A082DBB3239A6DD100777927 /* IQUIScrollView+Additions.h */,
+				A082DBB4239A6DD100777927 /* IQUITextFieldView+Additions.h */,
+				A082DBB5239A6DD100777927 /* IQUIViewController+Additions.m */,
+				A082DBB6239A6DD100777927 /* IQUIView+Hierarchy.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A08EEDC5239675D1007A604B /* 提示框 */ = {
+			isa = PBXGroup;
+			children = (
+				A08EEDC723967602007A604B /* HGHAlertview.h */,
+				A08EEDC623967602007A604B /* HGHAlertview.m */,
+			);
+			path = "提示框";
+			sourceTree = "<group>";
+		};
+		A08EEDC923967651007A604B /* 正则 */ = {
+			isa = PBXGroup;
+			children = (
+				A08EEDCA2396768F007A604B /* HGHregular.h */,
+				A08EEDCB2396768F007A604B /* HGHregular.m */,
+			);
+			path = "正则";
+			sourceTree = "<group>";
+		};
+		A08EEDD023975A90007A604B /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				A08EEDD223975AA0007A604B /* RSA.h */,
+				A08EEDD123975AA0007A604B /* RSA.m */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		A08EF9E0239648E300A0F187 /* LoginUI */ = {
+			isa = PBXGroup;
+			children = (
+				A08EF9E123964A5600A0F187 /* HGHAccountLogin.h */,
+				A08EF9E223964A5600A0F187 /* HGHAccountLogin.m */,
+				A08EEDBC23966010007A604B /* HGHAccountRegister.h */,
+				A08EEDBD23966010007A604B /* HGHAccountRegister.m */,
+				A08EEDBF23966230007A604B /* HGHPhoneLogin.h */,
+				A08EEDC023966230007A604B /* HGHPhoneLogin.m */,
+				A08EEDC2239663D6007A604B /* HGHPhoneRegister.h */,
+				A08EEDC3239663D6007A604B /* HGHPhoneRegister.m */,
+				A07C32A323992F82007B1F56 /* HGHChangePwd.h */,
+				A07C32A423992F82007B1F56 /* HGHChangePwd.m */,
+				A082DB8C239A4AB700777927 /* HGHBindPhoneNO.h */,
+				A082DB8D239A4AB700777927 /* HGHBindPhoneNO.m */,
+				A0967B6B239B8FA600E9038E /* HGHGuestBindPhoneNO.h */,
+				A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */,
+				A082DB8F239A4CA700777927 /* HGHRenzheng.h */,
+				A082DB90239A4CA700777927 /* HGHRenzheng.m */,
+			);
+			path = LoginUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +594,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A061D8EB239933AF00CF9DD8 /* hgh_fastlogin.png in Resources */,
+				A061D8ED239933AF00CF9DD8 /* hgh_longwhiteBtn.png in Resources */,
+				A061D8EF239933AF00CF9DD8 /* hgh_longBtn.png in Resources */,
 				A063D60423911B0200D6D710 /* LaunchScreen.storyboard in Resources */,
+				A082DB87239A139E00777927 /* hgh_testPhone.png in Resources */,
+				A061D8EE239933AF00CF9DD8 /* hgh_accountlogin.png in Resources */,
+				A061D8F1239933AF00CF9DD8 /* hgh_waring.png in Resources */,
+				A061D8E8239933AF00CF9DD8 /* hgh_phone.png in Resources */,
+				A082DBBE239A6DD100777927 /* IQKeyboardManager.bundle in Resources */,
+				A061D8EC239933AF00CF9DD8 /* hgh_goback.png in Resources */,
+				A061D8E9239933AF00CF9DD8 /* hgh_bigBtn.png in Resources */,
+				A061D8EA239933AF00CF9DD8 /* hgh_close.png in Resources */,
+				A061D8F2239933AF00CF9DD8 /* hgh_background.png in Resources */,
 				A063D60123911B0100D6D710 /* Assets.xcassets in Resources */,
+				A082DB93239A5F7600777927 /* hgh_nonoticeBtn.png in Resources */,
+				A017909D2396003300DF0E42 /* HGHPandas.plist in Resources */,
 				A063D5FF23911B0000D6D710 /* Main.storyboard in Resources */,
+				A061D8F0239933AF00CF9DD8 /* hgh_line.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,19 +622,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08EEDCF23968206007A604B /* HGHSDKConfig.m in Sources */,
+				A082DBC2239A6DD100777927 /* IQUIScrollView+Additions.m in Sources */,
 				A063D6402391271300D6D710 /* HGHFunctionHttp.m in Sources */,
 				A063D61823911B3500D6D710 /* HGHMainView.m in Sources */,
 				A063D5FC23911B0000D6D710 /* ViewController.m in Sources */,
+				A08EF9DC239646B900A0F187 /* HGHbaseUIButton.m in Sources */,
+				A068A88B239608B200C0BA6E /* HGHTest.m in Sources */,
+				A082DBC4239A6DD100777927 /* IQUIViewController+Additions.m in Sources */,
+				A08EF9D9239646A300A0F187 /* HGHbaseUITextField.m in Sources */,
 				A063D63A239122D100D6D710 /* HGHDMHttp.m in Sources */,
+				A063D6442394A76100D6D710 /* HGHUserInfo.m in Sources */,
+				A063D6472394A7CF00D6D710 /* HGHDeviceInfo.m in Sources */,
+				A082DBB9239A6DD100777927 /* IQToolbar.m in Sources */,
+				A082DBBC239A6DD100777927 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				A08EF9DF239646CB00A0F187 /* HGHbaseUILabel.m in Sources */,
+				A08EEDD323975AA0007A604B /* RSA.m in Sources */,
 				A063D61723911B3500D6D710 /* HGHBaseview.m in Sources */,
 				A063D63B239122D100D6D710 /* QWERReachability.m in Sources */,
+				A08EEDD723978822007A604B /* HGHResponse.m in Sources */,
+				A063D64A2394A85100D6D710 /* HGHOrderInfo.m in Sources */,
+				A08EEDBB23965A55007A604B /* HGHbaseUIImageView.m in Sources */,
+				A07C32A523992F82007B1F56 /* HGHChangePwd.m in Sources */,
+				A01790A3239601FE00DF0E42 /* HGHPandas.m in Sources */,
+				A082DBBB239A6DD100777927 /* IQBarButtonItem.m in Sources */,
+				A082DBC1239A6DD100777927 /* IQUITextFieldView+Additions.m in Sources */,
+				A082DBC5239A6DD100777927 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A063D63C239122D100D6D710 /* HGHDevice.m in Sources */,
+				A082DBBA239A6DD100777927 /* IQTitleBarButtonItem.m in Sources */,
+				A082DB91239A4CA700777927 /* HGHRenzheng.m in Sources */,
+				A08EEDC123966230007A604B /* HGHPhoneLogin.m in Sources */,
+				A08EEDCC2396768F007A604B /* HGHregular.m in Sources */,
+				A01790A7239607D700DF0E42 /* HGHUIConfig.m in Sources */,
+				A082DBC3239A6DD100777927 /* IQUIView+Hierarchy.m in Sources */,
 				A063D61923911B3500D6D710 /* HGHTools.m in Sources */,
+				A082DBB8239A6DD100777927 /* IQTextView.m in Sources */,
 				A063D60723911B0200D6D710 /* main.m in Sources */,
 				A063D62B23911E8A00D6D710 /* HGHHttpRequest.m in Sources */,
+				A082DBBD239A6DD100777927 /* IQPreviousNextView.m in Sources */,
+				A082DB8E239A4AB700777927 /* HGHBindPhoneNO.m in Sources */,
+				A08EF9E323964A5600A0F187 /* HGHAccountLogin.m in Sources */,
 				A063D5F923911B0000D6D710 /* AppDelegate.m in Sources */,
+				A082DBBF239A6DD100777927 /* IQKeyboardManager.m in Sources */,
+				A08EEDC823967602007A604B /* HGHAlertview.m in Sources */,
 				A063D62E23911EBE00D6D710 /* HGHExchange.m in Sources */,
+				A0967B6D239B8FA600E9038E /* HGHGuestBindPhoneNO.m in Sources */,
+				A08EEDBE23966010007A604B /* HGHAccountRegister.m in Sources */,
 				A063D639239122D100D6D710 /* HGHDeviceReport.m in Sources */,
+				A082DBC0239A6DD100777927 /* IQNSArray+Sort.m in Sources */,
+				A08EEDC4239663D6007A604B /* HGHPhoneRegister.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +814,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V9KUQ78236;
+				GCC_PREFIX_HEADER = /Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Config/HGHPandas.pch;
 				INFOPLIST_FILE = SDK_new_version/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,6 +834,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V9KUQ78236;
+				GCC_PREFIX_HEADER = /Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Config/HGHPandas.pch;
 				INFOPLIST_FILE = SDK_new_version/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,0 +1,20 @@
+//
+//  HGHPandas.pch
+//  SDK_new_version
+//
+//  Created by Lucas on 2019/12/3.
+//  Copyright © 2019 Lucas. All rights reserved.
+//
+#import "HGHUIConfig.h"
+#ifndef HGHPandas_pch
+#define HGHPandas_pch
+
+#define SCREENWIDTH [HGHUIConfig ScreenWidth]
+#define SCREENHEIGHT [HGHUIConfig Screenheight]
+#define MAINVIEWWIDTH [HGHUIConfig MainViewWidth]
+#define MAINVIEWHEIGHT [HGHUIConfig mainViewHeight]
+#define TFWIDTH [HGHUIConfig TFWidth]
+#define TFHEIGHT [HGHUIConfig TFHeight]
+#define DISTANCE1 [HGHUIConfig DistanceHeight1]
+#define DISTANCE2 [HGHUIConfig DistanceHeight2]
+#endif /* HGHPandas_pch */

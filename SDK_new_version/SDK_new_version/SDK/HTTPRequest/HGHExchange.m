@@ -9,6 +9,49 @@
 #import "HGHExchange.h"
 
 @implementation HGHExchange
+
++(NSString *)getHttpSing:(NSMutableDictionary *)dic
+{
+    NSString *str = nil;
+    NSMutableArray *parameters_array = [NSMutableArray arrayWithArray:[dic allKeys]];
+    [parameters_array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [obj1 compare:obj2];
+        //return [obj2 compare:obj1];//降序
+    } ];
+    for (int i = 0; i<parameters_array.count; i++) {
+        NSString *key = [parameters_array objectAtIndex: i];
+        NSString * value = [dic objectForKey:key];
+        value = [self encodeString:value];
+        if (i==0) {
+            
+            str = [NSString stringWithFormat:@"%@=%@",key,value] ;
+            
+        }else{
+            
+            str = [NSString stringWithFormat:@"%@&%@=%@",str,key,value];
+        }
+        
+    }
+    
+    return str;
+}
++(NSString*)encodeString:(NSString*)unencodedString{
+    
+    NSString *encodedString=nil;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] > 9.0f) {
+        
+        encodedString = (NSString *)
+        CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                  (CFStringRef)unencodedString,
+                                                                  NULL,
+                                                                  (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                  kCFStringEncodingUTF8));
+    }
+    
+    encodedString = [encodedString stringByReplacingOccurrencesOfString:@"%20" withString:@"+"];
+    return encodedString;
+}
+
 + (NSString *)exchangeStringWithdict:(NSDictionary *)dict
 {
 //    NSArray *keysArray = [dict allKeys];

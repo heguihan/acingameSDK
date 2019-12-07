@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)CGFloat baseY;
 @property(nonatomic,assign)CGFloat baseWidth;
 @property(nonatomic,assign)CGFloat baseHeight;
-//@property(nonatomic,assign)CGPoint baseCenter;
 
+-(instancetype)initWithFrame:(CGRect)frame;
 @end
 
 NS_ASSUME_NONNULL_END

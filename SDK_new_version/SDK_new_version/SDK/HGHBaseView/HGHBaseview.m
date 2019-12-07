@@ -18,6 +18,14 @@
 }
 */
 
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    if (self=[super initWithFrame:frame]) {
+        self.layer.cornerRadius=3;
+    }
+    return self;
+}
+
 -(void)setBaseX:(CGFloat)baseX
 {
     CGRect frame = self.frame;
@@ -49,11 +57,6 @@
     self.frame = frame;
 }
 
-//-(void)setBaseCenter:(CGPoint)baseCenter
-//{
-//    self.center = baseCenter;
-//}
-
 -(CGFloat)baseX
 {
     return self.frame.origin.x;
@@ -74,11 +77,4 @@
     return self.frame.size.height;
 }
 
-//-(CGPoint)baseCenter
-//{
-//    CGFloat centerx = [self baseX]+[self baseWidth]/2;
-//    CGFloat centery = [self baseY]+[self baseHeight]/2;
-//    CGPoint center = CGPointMake(centerx, centery);
-//    return center;
-//}
 @end

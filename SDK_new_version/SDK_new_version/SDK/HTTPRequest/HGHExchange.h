@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)exchangeStringWithdict:(NSDictionary *)dict;
 +(NSString *)getSignStrWithDict:(NSDictionary *)dict;
 + (nullable NSString *)md5:(nullable NSString *)str;
++(NSString *)getHttpSing:(NSMutableDictionary *)dic;
 @end
 
 NS_ASSUME_NONNULL_END
