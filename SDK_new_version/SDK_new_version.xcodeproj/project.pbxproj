@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A01504EA239DDF2F003DA282 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A01504E9239DDF2F003DA282 /* ProgressHUD.m */; };
+		A01504EE239DE0A8003DA282 /* HGHIAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A01504EC239DE0A8003DA282 /* HGHIAPManager.m */; };
 		A017909D2396003300DF0E42 /* HGHPandas.plist in Resources */ = {isa = PBXBuildFile; fileRef = A017909C2396003300DF0E42 /* HGHPandas.plist */; };
 		A01790A3239601FE00DF0E42 /* HGHPandas.m in Sources */ = {isa = PBXBuildFile; fileRef = A01790A2239601FE00DF0E42 /* HGHPandas.m */; };
 		A01790A7239607D700DF0E42 /* HGHUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A01790A6239607D700DF0E42 /* HGHUIConfig.m */; };
+		A05EBB00239E4329007B820E /* HGHLogout.m in Sources */ = {isa = PBXBuildFile; fileRef = A05EBAFF239E4329007B820E /* HGHLogout.m */; };
 		A061D8E8239933AF00CF9DD8 /* hgh_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8DD239933AE00CF9DD8 /* hgh_phone.png */; };
 		A061D8E9239933AF00CF9DD8 /* hgh_bigBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8DE239933AF00CF9DD8 /* hgh_bigBtn.png */; };
 		A061D8EA239933AF00CF9DD8 /* hgh_close.png in Resources */ = {isa = PBXBuildFile; fileRef = A061D8DF239933AF00CF9DD8 /* hgh_close.png */; };
@@ -75,15 +78,32 @@
 		A08EF9E323964A5600A0F187 /* HGHAccountLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A08EF9E223964A5600A0F187 /* HGHAccountLogin.m */; };
 		A0967B6D239B8FA600E9038E /* HGHGuestBindPhoneNO.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */; };
 		A0967B71239BB1B200E9038E /* HGHGetOrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B70239BB1B200E9038E /* HGHGetOrderManager.m */; };
+		A0967B74239BB89700E9038E /* HGHAppleMai.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B73239BB89700E9038E /* HGHAppleMai.m */; };
+		A0967B77239DF53D00E9038E /* HGHShowLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B76239DF53D00E9038E /* HGHShowLogView.m */; };
+		A0967B7D239E030900E9038E /* HGHShowBall.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B79239E030900E9038E /* HGHShowBall.m */; };
+		A0967B7E239E030900E9038E /* HGHFloatingBall.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B7C239E030900E9038E /* HGHFloatingBall.m */; };
+		A0967B81239E03AC00E9038E /* HGHDeviceType.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B80239E03AC00E9038E /* HGHDeviceType.m */; };
+		A0967B83239E04E300E9038E /* apple_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A0967B82239E04E300E9038E /* apple_icon.png */; };
+		A0967B86239E1D6800E9038E /* HGHAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0967B85239E1D6800E9038E /* HGHAccountManager.m */; };
+		A09CA900239E4D130016B6D5 /* HGHUserInfoReport.m in Sources */ = {isa = PBXBuildFile; fileRef = A09CA8FF239E4D130016B6D5 /* HGHUserInfoReport.m */; };
+		A09CA90C239E6AC40016B6D5 /* ReYunTracking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A09CA90B239E6AC40016B6D5 /* ReYunTracking.a */; };
+		A09CA913239E6D6B0016B6D5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A09CA912239E6D6B0016B6D5 /* libsqlite3.0.tbd */; };
+		A09CA915239E6D910016B6D5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09CA914239E6D900016B6D5 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A01504E8239DDF2F003DA282 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		A01504E9239DDF2F003DA282 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		A01504EC239DE0A8003DA282 /* HGHIAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHIAPManager.m; sourceTree = "<group>"; };
+		A01504ED239DE0A8003DA282 /* HGHIAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHIAPManager.h; sourceTree = "<group>"; };
 		A017909C2396003300DF0E42 /* HGHPandas.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HGHPandas.plist; sourceTree = "<group>"; };
 		A01790A1239601FE00DF0E42 /* HGHPandas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHPandas.h; sourceTree = "<group>"; };
 		A01790A2239601FE00DF0E42 /* HGHPandas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHPandas.m; sourceTree = "<group>"; };
 		A01790A4239607B100DF0E42 /* HGHPandas.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHPandas.pch; sourceTree = "<group>"; };
 		A01790A5239607D700DF0E42 /* HGHUIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHUIConfig.h; sourceTree = "<group>"; };
 		A01790A6239607D700DF0E42 /* HGHUIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHUIConfig.m; sourceTree = "<group>"; };
+		A05EBAFE239E4329007B820E /* HGHLogout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHLogout.h; sourceTree = "<group>"; };
+		A05EBAFF239E4329007B820E /* HGHLogout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHLogout.m; sourceTree = "<group>"; };
 		A061D8DD239933AE00CF9DD8 /* hgh_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_phone.png; sourceTree = "<group>"; };
 		A061D8DE239933AF00CF9DD8 /* hgh_bigBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_bigBtn.png; sourceTree = "<group>"; };
 		A061D8DF239933AF00CF9DD8 /* hgh_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hgh_close.png; sourceTree = "<group>"; };
@@ -200,6 +220,25 @@
 		A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHGuestBindPhoneNO.m; sourceTree = "<group>"; };
 		A0967B6F239BB1B200E9038E /* HGHGetOrderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHGetOrderManager.h; sourceTree = "<group>"; };
 		A0967B70239BB1B200E9038E /* HGHGetOrderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHGetOrderManager.m; sourceTree = "<group>"; };
+		A0967B72239BB89700E9038E /* HGHAppleMai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHAppleMai.h; sourceTree = "<group>"; };
+		A0967B73239BB89700E9038E /* HGHAppleMai.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHAppleMai.m; sourceTree = "<group>"; };
+		A0967B75239DF53D00E9038E /* HGHShowLogView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHShowLogView.h; sourceTree = "<group>"; };
+		A0967B76239DF53D00E9038E /* HGHShowLogView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHShowLogView.m; sourceTree = "<group>"; };
+		A0967B79239E030900E9038E /* HGHShowBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHShowBall.m; sourceTree = "<group>"; };
+		A0967B7A239E030900E9038E /* HGHShowBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHShowBall.h; sourceTree = "<group>"; };
+		A0967B7B239E030900E9038E /* HGHFloatingBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHFloatingBall.h; sourceTree = "<group>"; };
+		A0967B7C239E030900E9038E /* HGHFloatingBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHFloatingBall.m; sourceTree = "<group>"; };
+		A0967B7F239E03AC00E9038E /* HGHDeviceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHDeviceType.h; sourceTree = "<group>"; };
+		A0967B80239E03AC00E9038E /* HGHDeviceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHDeviceType.m; sourceTree = "<group>"; };
+		A0967B82239E04E300E9038E /* apple_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple_icon.png; sourceTree = "<group>"; };
+		A0967B84239E1D6800E9038E /* HGHAccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHAccountManager.h; sourceTree = "<group>"; };
+		A0967B85239E1D6800E9038E /* HGHAccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHAccountManager.m; sourceTree = "<group>"; };
+		A09CA8FE239E4D130016B6D5 /* HGHUserInfoReport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHUserInfoReport.h; sourceTree = "<group>"; };
+		A09CA8FF239E4D130016B6D5 /* HGHUserInfoReport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHUserInfoReport.m; sourceTree = "<group>"; };
+		A09CA90A239E6AC40016B6D5 /* Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
+		A09CA90B239E6AC40016B6D5 /* ReYunTracking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ReYunTracking.a; sourceTree = "<group>"; };
+		A09CA912239E6D6B0016B6D5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A09CA914239E6D900016B6D5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,12 +246,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09CA915239E6D910016B6D5 /* CoreMotion.framework in Frameworks */,
+				A09CA913239E6D6B0016B6D5 /* libsqlite3.0.tbd in Frameworks */,
+				A09CA90C239E6AC40016B6D5 /* ReYunTracking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A01504EB239DE094003DA282 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				A01504ED239DE0A8003DA282 /* HGHIAPManager.h */,
+				A01504EC239DE0A8003DA282 /* HGHIAPManager.m */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
 		A017909B2396001200DF0E42 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,11 +286,21 @@
 			path = "接口";
 			sourceTree = "<group>";
 		};
+		A05EBAFD239E42C2007B820E /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				A05EBAFE239E4329007B820E /* HGHLogout.h */,
+				A05EBAFF239E4329007B820E /* HGHLogout.m */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
 		A063D5EB23911B0000D6D710 = {
 			isa = PBXGroup;
 			children = (
 				A063D5F623911B0000D6D710 /* SDK_new_version */,
 				A063D5F523911B0000D6D710 /* Products */,
+				A09CA911239E6D6A0016B6D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +335,9 @@
 		A063D60D23911B3500D6D710 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				A09CA94D239FBE8F0016B6D5 /* maiiweb */,
+				A09CA8FD239E4CEA0016B6D5 /* UserInfoReport */,
+				A0967B78239E02F200E9038E /* FloatingBall */,
 				A082DB94239A6DC100777927 /* ToolSDK */,
 				A08EEDD023975A90007A604B /* RSA */,
 				A08EEDC923967651007A604B /* 正则 */,
@@ -311,6 +375,8 @@
 		A063D61123911B3500D6D710 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A05EBAFD239E42C2007B820E /* Logout */,
+				A01504EB239DE094003DA282 /* IAP */,
 				A0967B6E239BB19700E9038E /* GetOrder */,
 				A08EF9E0239648E300A0F187 /* LoginUI */,
 				A063D61223911B3500D6D710 /* HGHMainView.h */,
@@ -389,6 +455,7 @@
 		A07C32A023992696007B1F56 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				A0967B82239E04E300E9038E /* apple_icon.png */,
 				A061D8E3239933AF00CF9DD8 /* hgh_accountlogin.png */,
 				A061D8E7239933AF00CF9DD8 /* hgh_background.png */,
 				A061D8DE239933AF00CF9DD8 /* hgh_bigBtn.png */,
@@ -409,6 +476,7 @@
 		A082DB94239A6DC100777927 /* ToolSDK */ = {
 			isa = PBXGroup;
 			children = (
+				A09CA909239E6AC40016B6D5 /* reyun */,
 				A082DB95239A6DD100777927 /* IQKeyboardManager */,
 			);
 			path = ToolSDK;
@@ -493,8 +561,12 @@
 		A08EEDC5239675D1007A604B /* 提示框 */ = {
 			isa = PBXGroup;
 			children = (
+				A01504E8239DDF2F003DA282 /* ProgressHUD.h */,
+				A01504E9239DDF2F003DA282 /* ProgressHUD.m */,
 				A08EEDC723967602007A604B /* HGHAlertview.h */,
 				A08EEDC623967602007A604B /* HGHAlertview.m */,
+				A0967B75239DF53D00E9038E /* HGHShowLogView.h */,
+				A0967B76239DF53D00E9038E /* HGHShowLogView.m */,
 			);
 			path = "提示框";
 			sourceTree = "<group>";
@@ -536,6 +608,8 @@
 				A0967B6C239B8FA600E9038E /* HGHGuestBindPhoneNO.m */,
 				A082DB8F239A4CA700777927 /* HGHRenzheng.h */,
 				A082DB90239A4CA700777927 /* HGHRenzheng.m */,
+				A0967B84239E1D6800E9038E /* HGHAccountManager.h */,
+				A0967B85239E1D6800E9038E /* HGHAccountManager.m */,
 			);
 			path = LoginUI;
 			sourceTree = "<group>";
@@ -545,8 +619,57 @@
 			children = (
 				A0967B6F239BB1B200E9038E /* HGHGetOrderManager.h */,
 				A0967B70239BB1B200E9038E /* HGHGetOrderManager.m */,
+				A0967B72239BB89700E9038E /* HGHAppleMai.h */,
+				A0967B73239BB89700E9038E /* HGHAppleMai.m */,
 			);
 			path = GetOrder;
+			sourceTree = "<group>";
+		};
+		A0967B78239E02F200E9038E /* FloatingBall */ = {
+			isa = PBXGroup;
+			children = (
+				A0967B7F239E03AC00E9038E /* HGHDeviceType.h */,
+				A0967B80239E03AC00E9038E /* HGHDeviceType.m */,
+				A0967B7B239E030900E9038E /* HGHFloatingBall.h */,
+				A0967B7C239E030900E9038E /* HGHFloatingBall.m */,
+				A0967B7A239E030900E9038E /* HGHShowBall.h */,
+				A0967B79239E030900E9038E /* HGHShowBall.m */,
+			);
+			path = FloatingBall;
+			sourceTree = "<group>";
+		};
+		A09CA8FD239E4CEA0016B6D5 /* UserInfoReport */ = {
+			isa = PBXGroup;
+			children = (
+				A09CA8FE239E4D130016B6D5 /* HGHUserInfoReport.h */,
+				A09CA8FF239E4D130016B6D5 /* HGHUserInfoReport.m */,
+			);
+			path = UserInfoReport;
+			sourceTree = "<group>";
+		};
+		A09CA909239E6AC40016B6D5 /* reyun */ = {
+			isa = PBXGroup;
+			children = (
+				A09CA90A239E6AC40016B6D5 /* Tracking.h */,
+				A09CA90B239E6AC40016B6D5 /* ReYunTracking.a */,
+			);
+			path = reyun;
+			sourceTree = "<group>";
+		};
+		A09CA911239E6D6A0016B6D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A09CA914239E6D900016B6D5 /* CoreMotion.framework */,
+				A09CA912239E6D6B0016B6D5 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A09CA94D239FBE8F0016B6D5 /* maiiweb */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = maiiweb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,6 +742,7 @@
 				A061D8EC239933AF00CF9DD8 /* hgh_goback.png in Resources */,
 				A061D8E9239933AF00CF9DD8 /* hgh_bigBtn.png in Resources */,
 				A061D8EA239933AF00CF9DD8 /* hgh_close.png in Resources */,
+				A0967B83239E04E300E9038E /* apple_icon.png in Resources */,
 				A061D8F2239933AF00CF9DD8 /* hgh_background.png in Resources */,
 				A063D60123911B0100D6D710 /* Assets.xcassets in Resources */,
 				A082DB93239A5F7600777927 /* hgh_nonoticeBtn.png in Resources */,
@@ -637,6 +761,7 @@
 			files = (
 				A08EEDCF23968206007A604B /* HGHSDKConfig.m in Sources */,
 				A082DBC2239A6DD100777927 /* IQUIScrollView+Additions.m in Sources */,
+				A0967B7D239E030900E9038E /* HGHShowBall.m in Sources */,
 				A063D6402391271300D6D710 /* HGHFunctionHttp.m in Sources */,
 				A063D61823911B3500D6D710 /* HGHMainView.m in Sources */,
 				A063D5FC23911B0000D6D710 /* ViewController.m in Sources */,
@@ -648,29 +773,37 @@
 				A063D6442394A76100D6D710 /* HGHUserInfo.m in Sources */,
 				A063D6472394A7CF00D6D710 /* HGHDeviceInfo.m in Sources */,
 				A082DBB9239A6DD100777927 /* IQToolbar.m in Sources */,
+				A05EBB00239E4329007B820E /* HGHLogout.m in Sources */,
 				A082DBBC239A6DD100777927 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				A01504EA239DDF2F003DA282 /* ProgressHUD.m in Sources */,
 				A08EF9DF239646CB00A0F187 /* HGHbaseUILabel.m in Sources */,
 				A08EEDD323975AA0007A604B /* RSA.m in Sources */,
 				A063D61723911B3500D6D710 /* HGHBaseview.m in Sources */,
 				A063D63B239122D100D6D710 /* QWERReachability.m in Sources */,
+				A01504EE239DE0A8003DA282 /* HGHIAPManager.m in Sources */,
 				A08EEDD723978822007A604B /* HGHResponse.m in Sources */,
 				A063D64A2394A85100D6D710 /* HGHOrderInfo.m in Sources */,
 				A08EEDBB23965A55007A604B /* HGHbaseUIImageView.m in Sources */,
 				A07C32A523992F82007B1F56 /* HGHChangePwd.m in Sources */,
 				A01790A3239601FE00DF0E42 /* HGHPandas.m in Sources */,
 				A082DBBB239A6DD100777927 /* IQBarButtonItem.m in Sources */,
+				A09CA900239E4D130016B6D5 /* HGHUserInfoReport.m in Sources */,
+				A0967B86239E1D6800E9038E /* HGHAccountManager.m in Sources */,
 				A082DBC1239A6DD100777927 /* IQUITextFieldView+Additions.m in Sources */,
+				A0967B74239BB89700E9038E /* HGHAppleMai.m in Sources */,
 				A0967B71239BB1B200E9038E /* HGHGetOrderManager.m in Sources */,
 				A082DBC5239A6DD100777927 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A063D63C239122D100D6D710 /* HGHDevice.m in Sources */,
 				A082DBBA239A6DD100777927 /* IQTitleBarButtonItem.m in Sources */,
 				A082DB91239A4CA700777927 /* HGHRenzheng.m in Sources */,
 				A08EEDC123966230007A604B /* HGHPhoneLogin.m in Sources */,
+				A0967B77239DF53D00E9038E /* HGHShowLogView.m in Sources */,
 				A08EEDCC2396768F007A604B /* HGHregular.m in Sources */,
 				A01790A7239607D700DF0E42 /* HGHUIConfig.m in Sources */,
 				A082DBC3239A6DD100777927 /* IQUIView+Hierarchy.m in Sources */,
 				A063D61923911B3500D6D710 /* HGHTools.m in Sources */,
 				A082DBB8239A6DD100777927 /* IQTextView.m in Sources */,
+				A0967B81239E03AC00E9038E /* HGHDeviceType.m in Sources */,
 				A063D60723911B0200D6D710 /* main.m in Sources */,
 				A063D62B23911E8A00D6D710 /* HGHHttpRequest.m in Sources */,
 				A082DBBD239A6DD100777927 /* IQPreviousNextView.m in Sources */,
@@ -680,6 +813,7 @@
 				A082DBBF239A6DD100777927 /* IQKeyboardManager.m in Sources */,
 				A08EEDC823967602007A604B /* HGHAlertview.m in Sources */,
 				A063D62E23911EBE00D6D710 /* HGHExchange.m in Sources */,
+				A0967B7E239E030900E9038E /* HGHFloatingBall.m in Sources */,
 				A0967B6D239B8FA600E9038E /* HGHGuestBindPhoneNO.m in Sources */,
 				A08EEDBE23966010007A604B /* HGHAccountRegister.m in Sources */,
 				A063D639239122D100D6D710 /* HGHDeviceReport.m in Sources */,
@@ -835,7 +969,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dujie.SDK-new-version";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK_new_version/SDK/ToolSDK/reyun",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shuma.long;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = bao_dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -855,7 +993,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dujie.SDK-new-version";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK_new_version/SDK/ToolSDK/reyun",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shuma.long;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = bao_dev;
 				TARGETED_DEVICE_FAMILY = "1,2";

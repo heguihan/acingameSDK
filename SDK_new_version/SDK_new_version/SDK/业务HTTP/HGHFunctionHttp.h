@@ -37,8 +37,14 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)HGHDeviceReport:(HGHDeviceInfo *)deviceInfo userID:(NSString *)userID ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
 //下单
 +(void)HGHGetOrder:(HGHOrderInfo *)orderInfo ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
+    //other下单
++(void)HGHGetOtherOrder:(HGHOrderInfo *)orderInfo andUrl:(NSString *)url ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
 //实名认证
 +(void)HGHRenzhengWithUserName:(NSString *)userName idCardNumber:(NSString *)idcardNumber ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
+    //发送iap票据
++(void)HGHSendRecieptWithReceiptInfo:(NSMutableDictionary *)receipt ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
+//初始化切支付
++(void)HGHTInitSDKifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
 @end
 
 NS_ASSUME_NONNULL_END

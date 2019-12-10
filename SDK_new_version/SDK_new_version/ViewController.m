@@ -14,6 +14,11 @@
 #import "HGHOrderInfo.h"
 #import "HGHTools.h"
 #import "HGHRenzheng.h"
+#import "HGHShowLogView.h"
+#import "HGHShowBall.h"
+#import "HGHAccountManager.h"
+#import "HGHPandas.h"
+#import "HGHGetOrderManager.h"
 @interface ViewController ()
 
 @end
@@ -33,6 +38,7 @@
 -(void)begin
 {
     [self creatUI];
+    [HGHPandas SDKinit];
 }
 
 -(void)creatUI
@@ -68,7 +74,24 @@
 
 -(void)test
 {
-    [[HGHMainView shareInstance] login];
+    
+    [[HGHPandas shareInstance] LogoutCallBack:^{
+        NSLog(@"游戏退出");
+    }];
+    
+    [[HGHPandas shareInstance] LoginInfo:^(NSDictionary * _Nonnull loginInfo) {
+        NSLog(@"loginfo=%@",loginInfo);
+    }];
+}
+
+-(void)testFloatball
+{
+//    [HGHShowBall showFloatingball];
+    [[HGHAccountManager shareInstance] showAccountManager];
+}
+-(void)testShowLog
+{
+    [[HGHShowLogView shareInstance] showLogsWithMsg:@"事实上四四试试"];
 }
 
 
@@ -96,7 +119,7 @@
     orderInfo.extension = @"ttt";
     orderInfo.gameCallbackUrl = @"http://www.baidu.com";
     orderInfo.money = @"11";
-    orderInfo.productID = @"com";
+    orderInfo.productID = @"ceshibaolong.1xx";
     orderInfo.serverID=@"10";
     orderInfo.serverName = @"one";
     orderInfo.roleID = @"123";
@@ -104,26 +127,45 @@
     orderInfo.productName = @"80yuanbao";
     orderInfo.productDesc = @"yuanbao";
     
-    [HGHFunctionHttp HGHGetOrder:orderInfo ifSuccess:^(id  _Nonnull response) {
-        NSLog(@"response=%@",response);
-    } failure:^(NSError * _Nonnull error) {
-        NSLog(@"error=%@",error);
-    }];
+    
+    [[HGHGetOrderManager shareInstance] getOrderIDWithOrderInfo:orderInfo];
+//    [HGHFunctionHttp HGHGetOrder:orderInfo ifSuccess:^(id  _Nonnull response) {
+//        NSLog(@"response=%@",response);
+//    } failure:^(NSError * _Nonnull error) {
+//        NSLog(@"error=%@",error);
+//    }];
 }
+/*
 
+@property(nonatomic,strong)NSString *opType; //类型: 2-创建角色,3-等级提升,5-进入游戏
+@property(nonatomic,strong)NSString *roleID;
+@property(nonatomic,strong)NSString *roleLevel;
+@property(nonatomic,strong)NSString *roleName;
+@property(nonatomic,strong)NSString *serverID;
+@property(nonatomic,strong)NSString *serverName;
+*/
 -(void)accountBind
 {
-    [[HGHMainView shareInstance] showAccountBindView];
+//    [[HGHMainView shareInstance] showAccountBindView];
+    HGHUserInfo *userInfo = [[HGHUserInfo alloc]init];
+    userInfo.opType = @"2";
+    userInfo.roleID = @"123";
+    userInfo.roleLevel = @"12";
+    userInfo.roleName = @"测试";
+    userInfo.serverID = @"1";
+    userInfo.serverName = @"1服";
+    [HGHPandas ReportUserInfo:userInfo];
+    
 }
 
 -(void)guestBind
 {
-    [[HGHMainView shareInstance] showGuestBindView];
+//    [[HGHMainView shareInstance] showGuestBindView];
 }
 
 -(void)test1
 {
-    [[HGHMainView shareInstance] showRenzhengView];
+    [[HGHMainView shareInstance] showRenzhengViewWithUserInfo:@{@"test":@"test"}];
 }
 
 -(void)clickTest:(UIButton *)sender

@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)HGHBaseview *baseView;
 +(instancetype)shareInstance;
 -(void)login;
+-(void)showRenzhengViewWithUserInfo:(NSDictionary *)userInfo;
+-(void)showAccountBindViewWithUserInfo:(NSDictionary *)userInfo;
+-(void)showGuestBindViewWithUserInfo:(NSDictionary *)userInfo;
 -(void)showRenzhengView;
 -(void)showAccountBindView;
 -(void)showGuestBindView;

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HGHDeviceReport : NSObject
-
+//登录和注册传一个id
 +(void)HGHreportDeviceInfo:(NSDictionary *)deviceInfo ename:(NSString *)ename;
 @end
 

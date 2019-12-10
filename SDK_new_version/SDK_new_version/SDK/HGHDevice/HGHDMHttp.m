@@ -12,13 +12,6 @@
 +(void)POSTNEW:(NSString*)URL paramString:(NSDictionary*)dict ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure
 {
     
-//    NSLog(@"url=%@",URL);
-//    NSString *signBe =@"";
-//    NSLog(@"signBe=%@",signBe);
-//    NSString *sign = [HGHExchange md5:signBe];
-//    NSLog(@"sign=%@",sign);
-//    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
-//    [mutableDict setObject:sign forKey:@"sign"];
     NSLog(@"dict device上报 =%@",dict);
     NSString *resultParamStr = [HGHExchange exchangeStringWithdict:dict];
     NSLog(@"resultParamStr=%@",resultParamStr);

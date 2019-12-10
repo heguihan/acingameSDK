@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)HGHbaseUITextField *userTF;
 @property(nonatomic,strong)HGHbaseUITextField *idcardTF;
 @property(nonatomic,strong)NSDictionary *userInfo;
+@property(nonatomic,strong)NSString *pushedBy;
 +(instancetype)shareInstance;
 -(void)showRenzhengView;
 -(void)showRenzhengViewWithUserinfo:(NSDictionary *)userInfo;

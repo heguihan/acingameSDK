@@ -19,6 +19,8 @@
 #import "HGHbaseUILabel.h"
 #import "HGHbaseUIImageView.h"
 #import "HGHPhoneLogin.h"
+#import "HGHShowLogView.h"
+
 @implementation HGHAccountLogin
 +(instancetype)shareInstance
 {
@@ -47,6 +49,13 @@
     [backBtn setImage:[UIImage imageNamed:@"hgh_goback.png"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(clickBack:) forControlEvents:UIControlEventTouchUpInside];
     
+    CGFloat titleLabWidth = 200;
+    HGHbaseUILabel *titleLab = [[HGHbaseUILabel alloc]initWithFrame:CGRectMake((MAINVIEWWIDTH-titleLabWidth)/2, 5, titleLabWidth, 40)];
+    titleLab.text = @"账号登录";
+    [self.imageView addSubview:titleLab];
+    titleLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:30];
+    titleLab.textAlignment = NSTextAlignmentCenter;
+    titleLab.textColor = [UIColor colorWithRed:255/255.0 green:183/255.0 blue:40/255.0 alpha:1];
     
     CGFloat uilayerX = (MAINVIEWWIDTH-TFWIDTH)/2;
     HGHbaseUITextField *userTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, 50, TFWIDTH, TFHEIGHT)];
@@ -56,10 +65,23 @@
     [self.imageView addSubview:userTF];
     
     HGHbaseUITextField *pwdTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, userTF.baseBottom+DISTANCE1, TFWIDTH, TFHEIGHT)];
-//    pwdTF.backgroundColor = [UIColor grayColor];
+//secureTextEntry
+    pwdTF.secureTextEntry = YES;
     [self.imageView addSubview:pwdTF];
     pwdTF.placeholder = @"请输入登录密码";
     self.pwdTF = pwdTF;
+    
+    NSString *userID = [[NSUserDefaults standardUserDefaults] objectForKey:@"accounthghpandasuser"];
+    NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"accounthghpandaspwd"];
+    
+    if (![userID isEqualToString:@""]) {
+        userTF.text = userID;
+    }
+    if (![pwd isEqualToString:@""]) {
+        pwdTF.text = pwd;
+    }
+    
+    
     CGFloat registWidth = 63;
     HGHbaseUIButton *registRightnow = [[HGHbaseUIButton alloc]initWithFrame:CGRectMake(uilayerX+TFWIDTH-registWidth, pwdTF.baseBottom+DISTANCE1/2, registWidth, 20)];
 //    registRightnow.backgroundColor = [UIColor blueColor];
@@ -148,14 +170,40 @@
 
 -(void)checkUser:(NSString *)user pwd:(NSString *)pwd
 {//type  1手机  2账号  3游客
-    NSString *uuuu = @"hghtest";
-    NSString *pppp = @"123456";
-    [HGHFunctionHttp HGHLoginUserID:uuuu pwd:pppp type:@"2" phoneNO:@"" ifSuccess:^(id  _Nonnull response) {
+
+    if (user.length<1) {
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入账号"];
+        return;
+    }
+    if (pwd.length<1) {
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入密码"];
+        return;
+    }
+    [self accountLoginRequestWithUserID:user pwd:pwd];
+
+}
+
+-(void)accountLoginRequestWithUserID:(NSString *)user pwd:(NSString *)pwd
+{
+    [HGHFunctionHttp HGHLoginUserID:user pwd:pwd type:@"2" phoneNO:@"" ifSuccess:^(id  _Nonnull response) {
         NSLog(@"response=%@",response);
         if ([response[@"ret"] intValue]==0) {
             NSLog(@"成功");
-            [HGHResponse loginsuccessWithUserData:response logintype:@"2" type:@"login"];
-            [HGHTools removeViews:[HGHMainView shareInstance].baseView];
+            NSLog(@"user=%@,pwd=%@",user,pwd);
+            [[NSUserDefaults standardUserDefaults] setObject:user forKey:@"accounthghpandasuser"];
+            [[NSUserDefaults standardUserDefaults] setObject:pwd forKey:@"accounthghpandaspwd"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+////                [HGHTools removeViews:[HGHMainView shareInstance].baseView];
+//
+//            });
+//            [HGHTools removeViews:[HGHMainView shareInstance].baseView];
+             [HGHResponse loginsuccessWithUserData:response logintype:@"2" type:@"login"];
+            
+            
+            
+            
         }else{
             NSString *msg = response[@"msg"];
             [HGHAlertview showAlertViewWithMessage:msg];
@@ -165,6 +213,7 @@
         
     }];
 }
+
 //快速登录
 -(void)fastLogin:(UIButton *)sender
 {
@@ -184,8 +233,8 @@
     [HGHFunctionHttp HGHLoginDevice:deviceID ifSuccess:^(id  _Nonnull response) {
         NSLog(@"response=%@",response);
         if ([response[@"ret"] intValue]==0) {
+//            [HGHTools removeViews:[HGHMainView shareInstance].baseView];
             [HGHResponse loginsuccessWithUserData:response logintype:@"3" type:@"login"];
-            [HGHTools removeViews:[HGHMainView shareInstance].baseView];
         }else{
             NSString *msg = [response objectForKey:@"msg"];
             [HGHAlertview showAlertViewWithMessage:msg];

@@ -12,7 +12,8 @@
 #import "HGHTools.h"
 //http://fshuet.acingame.com/
 //#define URL_DOMAIN @"https://zhijie.acingame.com/"
-#define URL_DOMAIN @"http://fshuet.acingame.com/"
+//#define URL_DOMAIN @"http://fshuet.acingame.com/"
+#define URL_DOMAIN @"http://192.168.1.87:8082/"
 #define URL_REGISTER @"register/"
 #define URL_LOGIN @"login/"
 #define URL_SENDMSG @"sendSMS/"
@@ -22,6 +23,8 @@
 #define URL_DEVICEREPORT @"api/other/device/report/"
 #define URL_GETORDER @"requestPay/"
 #define URL_RENZHENG @"api/auth/idCard/"
+#define URL_RECIEPT @"paycallback/"
+#define URL_INIT @"channelPay/"
 @implementation HGHFunctionHttp
 //账号注册
 +(void)HGHAccountRegisterWithUserID:(NSString *)userID pwd:(NSString *)pwd ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure
@@ -205,7 +208,7 @@
     NSDictionary *dict = @{@"id":ID,
                            @"appID":[HGHSDKConfig currentAppID],
                            @"channelID":[HGHSDKConfig currentChannelID],
-                           @"deviceID":userInfo.deviceID,
+                           @"deviceID":[HGHTools getUUID],
                            @"opType":userInfo.opType,
                            @"roleID":userInfo.roleID,
                            @"roleLevel":userInfo.roleLevel,
@@ -308,6 +311,61 @@
     }];
 }
 
+    //other下单
++(void)HGHGetOtherOrder:(HGHOrderInfo *)orderInfo andUrl:(NSString *)url ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure
+{
+//    NSString *urlxx = [NSString stringWithFormat:@"%@/%@",url,@"appstore"];
+    NSString  *appid = [HGHSDKConfig currentAppID];
+    NSString  *appsecret = [HGHSDKConfig currentAppKey];
+        // 平台数据
+    NSDictionary *platformDic =@{
+                                 @"subject" :orderInfo.productName,
+                                 @"body":orderInfo.extension,
+                                 };
+    NSError *parseError = nil;
+    NSString *userID = [HGHTools getCurrentUserID];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:platformDic options:NSJSONWritingPrettyPrinted error:&parseError];
+    NSString *payPlatformDataStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSString *dateStr = [NSString stringWithFormat:@"%d", (int)[[NSDate date] timeIntervalSince1970]];
+    /***************************/
+    
+    /***************************/
+    
+        // 3.设置请求体  6892fb801a55dedf4703c9ff317d39fe hghtest
+    NSDictionary *dict = @{
+                           @"cpOrderID" : orderInfo.cpOrderID,
+                           @"extension" :orderInfo.extension,
+                           @"gameCallbackUrl": orderInfo.gameCallbackUrl,
+                           @"userID" : userID,
+                           @"yingID":[HGHTools getCurrentYingID],
+                           @"serverID":orderInfo.serverID,
+                           @"serverName":orderInfo.serverName,
+                           @"roleID":orderInfo.roleID,
+                           @"roleName":orderInfo.roleName,
+                           @"money":orderInfo.money,
+                           @"productID" :orderInfo.productID,
+                           @"channelID":[HGHSDKConfig currentChannelID],
+                           @"ts":dateStr,
+                           @"payPlatformData": payPlatformDataStr
+                           };
+    NSMutableDictionary *mutabDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
+    NSString *sortStr = [HGHTools sortHttpString:mutabDict];
+    NSLog(@"sortStr=%@",sortStr);
+    NSString *signStr = [NSString stringWithFormat:@"%@&key=%@",sortStr,[HGHSDKConfig currentAppKey]];
+    NSString *sign = [HGHTools md5String:signStr];
+    [mutabDict setObject:sign forKey:@"sign"];
+    [mutabDict setObject:@"rsa" forKey:@"signType"];
+    NSLog(@"dictxx=%@",[mutabDict copy]);
+    [HGHHttpRequest POSTNEW:url paramString:[mutabDict copy] ifSuccess:^(id  _Nonnull response) {
+        NSLog(@"response=%@",response);
+        success(response);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"error=%@",error);
+        failure(error);
+    }];
+}
+
+
 //实名认证
 +(void)HGHRenzhengWithUserName:(NSString *)userName idCardNumber:(NSString *)idcardNumber ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure
 {
@@ -328,6 +386,37 @@
         failure(error);
     }];
 }
-
-
+//发送iap票据
++(void)HGHSendRecieptWithReceiptInfo:(NSMutableDictionary *)receipt ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure
+{
+    NSString *url = [NSString stringWithFormat:@"%@%@%@/%@",URL_DOMAIN,URL_RECIEPT,[HGHSDKConfig currentAppID],@"appstore"];
+    NSDictionary *dict = @{@"cpOrderID":receipt[@"sdkorderID"],
+                           @"transactionReceipt":receipt[@"transaction"],
+                           @"platformOrderID":receipt[@"platformOrderID"],
+                           @"money":receipt[@"money"]
+                           };
+    NSMutableDictionary *mutabDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
+    NSString *sortStr = [HGHTools sortHttpString:mutabDict];
+    NSString *signStr = [NSString stringWithFormat:@"%@&key=%@",sortStr,[HGHSDKConfig currentAppKey]];
+    NSString *sign = [HGHTools md5String:signStr];
+    [mutabDict setObject:sign forKey:@"sign"];
+    
+    [HGHHttpRequest POSTNEW:url paramString:[mutabDict copy] ifSuccess:^(id  _Nonnull response) {
+        success(response);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"error=%@",error);
+        failure(error);
+    }];
+}
+    //初始化切支付
++(void)HGHTInitSDKifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure
+{
+    NSString *url = [NSString stringWithFormat:@"%@%@%@?channel_id=%@",URL_DOMAIN,URL_INIT,[HGHSDKConfig currentAppID],[HGHSDKConfig currentChannelID]];
+    [HGHHttpRequest POSTNEW:url paramString:@{@"test":@"test"} ifSuccess:^(id  _Nonnull response) {
+        success(response);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"error=%@",error);
+        failure(error);
+    }];
+}
 @end

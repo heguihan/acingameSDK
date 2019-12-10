@@ -7,47 +7,226 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "78432F7D-8A5F-4357-B6AE-4517AD39D313"
+            uuid = "DE718D23-7C78-44E5-A88B-7FD0D51CE01A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_new_version/SDK/HGHDevice/HGHDeviceReport.m"
-            timestampString = "597402980.2992409"
+            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneLogin.m"
+            timestampString = "597675698.441288"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "+HGHreportDeviceInfo:ename:"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "-checkPhoneNO:pwd:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76066671-5B60-4D68-9488-449939221853"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneRegister.m"
+            timestampString = "597675698.441355"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "-checkoutRegisterPhoneNo:code:pwd:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C1A03B9-723E-4F6D-ADA3-3C826417E2C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneRegister.m"
+            timestampString = "597675698.4414099"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "-checkoutRegisterPhoneNo:code:pwd:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8809867-6790-4108-9C88-6FF6E44DBC9D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneRegister.m"
+            timestampString = "597675698.441484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-checkoutRegisterPhoneNo:code:pwd:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/HGHDevice/HGHDMHttp.m"
+            timestampString = "597675431.374681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "+POSTNEW:paramString:ifSuccess:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/IAP/HGHIAPManager.m"
+            timestampString = "597639911.070053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-getApplePayWithproductIDS:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/IAP/HGHIAPManager.m"
+            timestampString = "597639911.070112"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-sendReceipt:andtransxxx:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/IAP/HGHIAPManager.m"
+            timestampString = "597639911.070166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "-sendReceipt:andtransxxx:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/IAP/HGHIAPManager.m"
+            timestampString = "597639911.0702291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "-sendReceipt:andtransxxx:"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "+[HGHDeviceReport HGHreportDeviceInfo:ename:]"
+                  symbolName = "-[HGHIAPManager sendReceipt:andtransxxx:]"
                   moduleName = "SDK_new_version"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/HGHDevice/HGHDeviceReport.m"
-                  timestampString = "597406459.7998509"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Login/IAP/HGHIAPManager.m"
+                  timestampString = "597675698.666355"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "1776">
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "712">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__45+[HGHDeviceReport HGHreportDeviceInfo:ename:]_block_invoke"
+                  symbolName = "__41-[HGHIAPManager sendReceipt:andtransxxx:]_block_invoke"
                   moduleName = "SDK_new_version"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/HGHDevice/HGHDeviceReport.m"
-                  timestampString = "597406459.8020869"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Login/IAP/HGHIAPManager.m"
+                  timestampString = "597675698.6682661"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/GetOrder/HGHGetOrderManager.m"
+            timestampString = "597675698.441805"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-getiaporderWithOrderInfo:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HGHGetOrderManager getiaporderWithOrderInfo:]"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Login/GetOrder/HGHGetOrderManager.m"
+                  timestampString = "597675698.673174"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[HGHGetOrderManager getiaporderWithOrderInfo:]_block_invoke"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Login/GetOrder/HGHGetOrderManager.m"
+                  timestampString = "597675698.675048"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
                   offsetFromSymbolStart = "48">
                </Location>
             </Locations>
@@ -56,18 +235,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A533A8F5-2D1F-49DA-BBB9-C7E242DB1E60"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHChangePwd.m"
-            timestampString = "597406459.766381"
+            filePath = "SDK_new_version/SDK/Login/GetOrder/HGHGetOrderManager.m"
+            timestampString = "597675698.4418761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
             endingLineNumber = "83"
-            landmarkName = "-clickBack:"
+            landmarkName = "-getotherOrderWithorderInfo:andurl:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HGHGetOrderManager getotherOrderWithorderInfo:andurl:]"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Login/GetOrder/HGHGetOrderManager.m"
+                  timestampString = "597675698.67981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__56-[HGHGetOrderManager getotherOrderWithorderInfo:andurl:]_block_invoke"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/Login/GetOrder/HGHGetOrderManager.m"
+                  timestampString = "597675698.68178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -76,13 +286,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneLogin.m"
-            timestampString = "597406459.766436"
+            filePath = "SDK_new_version/SDK/HGHtools/HGHResponse.m"
+            timestampString = "597675698.441931"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "152"
             endingLineNumber = "152"
-            landmarkName = "-checkPhoneNO:pwd:"
+            landmarkName = "+responseSuccess:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -92,13 +302,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneRegister.m"
-            timestampString = "597406459.7664911"
+            filePath = "SDK_new_version/SDK/&#x4e1a;&#x52a1;HTTP/HGHFunctionHttp.m"
+            timestampString = "597675698.441995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "-checkoutRegisterPhoneNo:code:pwd:"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
+            landmarkName = "+HGHGetOtherOrder:andUrl:ifSuccess:failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[HGHFunctionHttp HGHGetOtherOrder:andUrl:ifSuccess:failure:]"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/%E4%B8%9A%E5%8A%A1HTTP/HGHFunctionHttp.m"
+                  timestampString = "597675698.690756"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "359"
+                  endingLineNumber = "359"
+                  offsetFromSymbolStart = "2172">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__61+[HGHFunctionHttp HGHGetOtherOrder:andUrl:ifSuccess:failure:]_block_invoke"
+                  moduleName = "SDK_new_version"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucas/hgh/github/SDK_new_version/SDK_new_version/SDK/%E4%B8%9A%E5%8A%A1HTTP/HGHFunctionHttp.m"
+                  timestampString = "597675698.6928101"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "359"
+                  endingLineNumber = "359"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/HGHtools/HGHResponse.m"
+            timestampString = "597675698.442046"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "+responseSuccess:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -108,13 +366,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneRegister.m"
-            timestampString = "597406459.766542"
+            filePath = "SDK_new_version/SDK/HGHtools/HGHResponse.m"
+            timestampString = "597675698.442098"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "-checkoutRegisterPhoneNo:code:pwd:"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "+loginsuccessWithUserData:logintype:type:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -124,13 +382,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_new_version/SDK/Login/LoginUI/HGHPhoneRegister.m"
-            timestampString = "597406459.766591"
+            filePath = "SDK_new_version/SDK/HGHtools/HGHResponse.m"
+            timestampString = "597675698.442147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "-checkoutRegisterPhoneNo:code:pwd:"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "+loginsuccessWithUserData:logintype:type:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/HGHMainView.m"
+            timestampString = "597675698.442198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-showAccountBindViewWithUserInfo:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/HGHtools/HGHResponse.m"
+            timestampString = "597675698.4422489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "+loginsuccessWithUserData:logintype:type:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK_new_version/SDK/Login/HGHMainView.m"
+            timestampString = "597675698.4422981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-showAccountBindViewWithUserInfo:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

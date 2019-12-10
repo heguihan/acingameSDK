@@ -37,6 +37,21 @@
     return strUUID;
 }
 
++(BOOL)isNeedShowbind
+{
+    NSString *clickDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"hghpandastodaynotnotice"];
+    double clickTime = [clickDate doubleValue];
+    NSDate *nowDate = [NSDate date];
+    NSTimeInterval nowTime = nowDate.timeIntervalSince1970;
+    double interval = nowTime - clickTime;
+    int oneday = 60*60*24;
+    if (interval>oneday) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
 + (NSMutableDictionary *)getKeychainQuery:(NSString *)service {
     return [NSMutableDictionary dictionaryWithObjectsAndKeys:
             (id)kSecClassGenericPassword,(id)kSecClass,

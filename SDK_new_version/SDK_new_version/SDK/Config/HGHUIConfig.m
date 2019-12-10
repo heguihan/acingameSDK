@@ -48,4 +48,9 @@
 {
     return 20;
 }
+
++(CGFloat)AccountCenterHeight
+{
+    return 250;
+}
 @end

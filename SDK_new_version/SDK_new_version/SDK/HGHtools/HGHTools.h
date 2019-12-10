@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)getCurrentYingID;
 + (void)removeViews:(UIView *)futherView;
 +(NSString *)getUUID;
++(BOOL)isNeedShowbind;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,12 @@
 //
 
 #import "HGHResponse.h"
+#import "HGHShowBall.h"
+#import "HGHMainView.h"
+#import "HGHPandas.h"
+#import "HGHTools.h"
+#import "HGHDeviceReport.h"
+#import "Tracking.h"
 
 @implementation HGHResponse
 +(instancetype)shareInstance
@@ -83,32 +89,72 @@
  
  */
 
-
+// logintype 登录类型  type login/register
 +(void)loginsuccessWithUserData:(NSDictionary *)dict logintype:(NSString *)loginType type:(NSString *)type
 {
-    NSLog(@"success dict=%@",dict);
-    [[NSUserDefaults standardUserDefaults] setObject:dict[@"userID"] forKey:@"pandasUserID"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    sdk_login_cb   sdk_registe_cb  sdk_init
+    
+    
+    if ([type isEqualToString:@"register"]) {
+        //DM设备信息上报
+        [HGHDeviceReport HGHreportDeviceInfo:@{@"id":dict[@"id"]} ename:@"sdk_registe_cb"];
+        //热云上报
+        [Tracking setRegisterWithAccountID:[dict objectForKey:@"userID"]];
+    }else if ([type isEqualToString:@"login"]){
+        //DM设备信息上报
+        [HGHDeviceReport HGHreportDeviceInfo:@{@"id":dict[@"id"]} ename:@"sdk_login_cb"];
+        //热云上报
+        [Tracking setLoginWithAccountID:[dict objectForKey:@"userID"]];
+    }
+    
+    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
+    [mutableDict setObject:loginType forKey:@"hghlogintype"];
     
     if ([dict[@"idCardAuth"] integerValue]==0) {
-        //show 认证
+        [[HGHMainView shareInstance] showRenzhengViewWithUserInfo:[mutableDict copy]];
     }else if ([dict[@"phoneNumber"] isEqualToString:@""]){
-        if ([type integerValue]==2) {
-            //show Z账号绑定
-        }else if ([type integerValue]==3){
-            // show游客绑定
+        if (![HGHTools isNeedShowbind]) {
+            [self responseSuccess:[mutableDict copy]];
+            return;
+        }
+        
+        if ([loginType integerValue]==2) {
+            [[HGHMainView shareInstance] showAccountBindViewWithUserInfo:[mutableDict copy]];
+        }else if ([loginType integerValue]==3){
+            [[HGHMainView shareInstance] showGuestBindViewWithUserInfo:[mutableDict copy]];
         }else{
             NSLog(@"树是智障");
         }
         //show 绑定
     }else{
-        [self responseSuccess:dict];
+        [[HGHMainView shareInstance].baseView removeFromSuperview];
+        [self responseSuccess:[mutableDict copy]];
     }
     
 }
 
 +(void)responseSuccess:(NSDictionary *)dict
 {
+    
+    NSInteger logintype = [dict[@"hghlogintype"] integerValue];
+    if (logintype==1) {
+        //手机号登录
+        
+    }else if (logintype==2){
+        //账号登录
+    }
+    NSLog(@"token callback=%@ dict=%@",dict[@"token"],dict);
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"id"] forKey:@"hghpandasreportUserID"];
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"userID"] forKey:@"pandasUserID"];
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"hghlogintype"] forKey:@"hghpandaslogintype"];
+    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"hghpandasuserinfo"];
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"yingID"] forKey:@"hghpandasyingid"];
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"token"] forKey:@"hghpandastoken"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [HGHShowBall showFloatingball];
+    [HGHPandas shareInstance].loginBlock(dict);
+    
     
 }
 @end

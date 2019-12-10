@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)HGHbaseUITextField *pwdTF;
 +(instancetype)shareInstance;
 -(void)showPhoneLogin;
+//k快速登录
+-(void)phoneLoginRequestWithPhoneNO:(NSString *)phoneNO pwd:(NSString *)pwd;
 @end
 
 NS_ASSUME_NONNULL_END

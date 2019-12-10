@@ -45,57 +45,111 @@
 -(void)login
 {
 
+    NSInteger logintype = [[[NSUserDefaults standardUserDefaults] objectForKey:@"hghpandaslogintype"] integerValue];
+    
+    NSLog(@"loginType=%ld",(long)logintype);
+    if (logintype==2) {
+        //账号登录
+        NSString *userID = [[NSUserDefaults standardUserDefaults] objectForKey:@"accounthghpandasuser"];
+        NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"accounthghpandaspwd"];
+        [[HGHAccountLogin shareInstance] accountLoginRequestWithUserID:userID pwd:pwd];
+        return;
+    }else if (logintype==1){
+        //手机号登录
+        NSString *phoneNO = [[NSUserDefaults standardUserDefaults] objectForKey:@"phonehghpandasphoneno"];
+        NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"phonehghpandaspwd"];
+        [[HGHPhoneLogin shareInstance] phoneLoginRequestWithPhoneNO:phoneNO pwd:pwd];
+        return;
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIViewController *currentVC = [HGHTools getCurrentVC];
+        self.baseView.backgroundColor = [UIColor grayColor];
+        [currentVC.view addSubview:self.baseView];
+        [[HGHAccountLogin shareInstance] showAccountLogin];
+    });
+
+    
+}
+
+-(void)showRenzhengViewWithUserInfo:(NSDictionary *)userInfo
+{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIViewController *currentVC = [HGHTools getCurrentVC];
+        self.baseView.backgroundColor = [UIColor grayColor];
+        [currentVC.view addSubview:self.baseView];
+        [HGHRenzheng shareInstance].pushedBy =@"login";
+        [[HGHRenzheng shareInstance] showRenzhengViewWithUserinfo:userInfo];
+    });
+
+}
+-(void)showAccountBindViewWithUserInfo:(NSDictionary *)userInfo
+{
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//
+//        UIViewController *currentVC = [HGHTools getCurrentVC];
+//        self.baseView.backgroundColor = [UIColor grayColor];
+//        [currentVC.view addSubview:self.baseView];
+//        [HGHBindPhoneNO shareInstance].pushedBy =@"login";
+//        [[HGHBindPhoneNO shareInstance] showAccountBindViewAndUserInfo:userInfo];
+//    });
     UIViewController *currentVC = [HGHTools getCurrentVC];
     self.baseView.backgroundColor = [UIColor grayColor];
     [currentVC.view addSubview:self.baseView];
-    
-     [[HGHAccountLogin shareInstance] showAccountLogin];
-    
-    NSArray *btnTitles = @[@"账号绑定",@"账号",@"游客绑定"];
-    CGFloat btnW = 60;
-    for (int i=0; i<3; i++) {
-        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(30+(30+btnW)*i, 80, btnW, btnW)];
-//        [self.baseView addSubview:btn];
-        btn.tag = 160+i;
-        btn.backgroundColor = [UIColor greenColor];
-        [btn setTitle:btnTitles[i] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(ClickBtn:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"hgh_phone.png"] forState:UIControlStateNormal];
-    [button setTitle:@"左边文字，右边图片" forState:UIControlStateNormal];
-    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, - button.imageView.image.size.width, 0, button.imageView.image.size.width)];
-    [button setImageEdgeInsets:UIEdgeInsetsMake(0, button.titleLabel.bounds.size.width, 0, -button.titleLabel.bounds.size.width)];
-    
-//    [self.baseView addSubview:button];
-    
+    [HGHBindPhoneNO shareInstance].pushedBy =@"login";
+    [[HGHBindPhoneNO shareInstance] showAccountBindViewAndUserInfo:userInfo];
+
+}
+-(void)showGuestBindViewWithUserInfo:(NSDictionary *)userInfo
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIViewController *currentVC = [HGHTools getCurrentVC];
+        self.baseView.backgroundColor = [UIColor grayColor];
+        [currentVC.view addSubview:self.baseView];
+        [HGHGuestBindPhoneNO shareInstance].pushedBy = @"login";
+        [[HGHGuestBindPhoneNO shareInstance] showGuestBindViewAndUserInfo:userInfo];
+    });
+
 }
 
 -(void)showRenzhengView
 {
-    UIViewController *currentVC = [HGHTools getCurrentVC];
-    self.baseView.backgroundColor = [UIColor grayColor];
-    [currentVC.view addSubview:self.baseView];
-    
-    [[HGHRenzheng shareInstance] showRenzhengView];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIViewController *currentVC = [HGHTools getCurrentVC];
+        self.baseView.backgroundColor = [UIColor grayColor];
+        [currentVC.view addSubview:self.baseView];
+        [HGHRenzheng shareInstance].pushedBy =@"accountCenter";
+        [[HGHRenzheng shareInstance] showRenzhengView];
+    });
 }
 -(void)showAccountBindView
 {
-    UIViewController *currentVC = [HGHTools getCurrentVC];
-    self.baseView.backgroundColor = [UIColor grayColor];
-    [currentVC.view addSubview:self.baseView];
-    
-    [[HGHBindPhoneNO shareInstance] showAccountBindView];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIViewController *currentVC = [HGHTools getCurrentVC];
+        self.baseView.backgroundColor = [UIColor grayColor];
+        [currentVC.view addSubview:self.baseView];
+        [HGHBindPhoneNO shareInstance].pushedBy =@"accountCenter";
+        [[HGHBindPhoneNO shareInstance] showAccountBindView];
+    });
 }
 -(void)showGuestBindView
 {
-    UIViewController *currentVC = [HGHTools getCurrentVC];
-    self.baseView.backgroundColor = [UIColor grayColor];
-    [currentVC.view addSubview:self.baseView];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIViewController *currentVC = [HGHTools getCurrentVC];
+        self.baseView.backgroundColor = [UIColor grayColor];
+        [currentVC.view addSubview:self.baseView];
+        [HGHGuestBindPhoneNO shareInstance].pushedBy = @"accountCenter";
+        [[HGHGuestBindPhoneNO shareInstance] showGuestBindView];
+    });
     
-    [[HGHGuestBindPhoneNO shareInstance] showGuestBindView];
 }
+
 
 
 

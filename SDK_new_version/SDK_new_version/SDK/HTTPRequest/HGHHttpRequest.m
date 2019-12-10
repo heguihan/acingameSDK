@@ -13,6 +13,7 @@
 
 +(void)POSTNEW:(NSString*)URL paramString:(NSDictionary*)dict ifSuccess:(void(^)(id response))success failure:(void(^)(NSError *error))failure
 {
+    NSLog(@"url=%@",URL);
     NSMutableDictionary *mutabdict = [[NSMutableDictionary alloc]initWithDictionary:dict];
     NSString *resultParamStr = [HGHExchange getHttpSing:mutabdict];
     NSLog(@"resultParamStr=%@",resultParamStr);
@@ -20,6 +21,11 @@
     NSString *paramstr = [self getRsaParamStr:resultParamStr];
     NSMutableURLRequest*request=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL] cachePolicy:(NSURLRequestUseProtocolCachePolicy) timeoutInterval:500];
     [request setHTTPMethod:@"POST"];
+    
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"hghpandastoken"];
+    NSLog(@"login token==%@",token);
+    NSString *resultToken = [NSString stringWithFormat:@"%@%@",@"bearer ",token];
+    [request addValue:resultToken forHTTPHeaderField:@"Authorization"];
     
 //    NSData*paraData=[resultParamStr dataUsingEncoding:NSUTF8StringEncoding];
     NSData*paraData=[paramstr dataUsingEncoding:NSUTF8StringEncoding];

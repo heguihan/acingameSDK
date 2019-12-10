@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong)UIImageView *imageView;
 @property(nonatomic,strong)HGHbaseUITextField *phoneTF;
 @property(nonatomic,strong)HGHbaseUITextField *codeTF;
+@property(nonatomic,strong)NSString *pushedBy;
 @property(nonatomic,strong)NSDictionary *userInfo;
 +(instancetype)shareInstance;
 -(void)showAccountBindView;

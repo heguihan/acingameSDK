@@ -17,6 +17,8 @@
 #import "HGHResponse.h"
 #import "HGHAlertview.h"
 #import "HGHregular.h"
+#import "HGHShowLogView.h"
+#import "HGHbaseUILabel.h"
 @implementation HGHBindPhoneNO
 
 +(instancetype)shareInstance
@@ -42,7 +44,8 @@
     self.userInfo = userInfo;
     [self showAccountBindView];
 }
--(void)showChangePwdView
+
+-(void)showAccountBindView
 {
     [[HGHMainView shareInstance].baseView addSubview:self.imageView];
     self.imageView.backgroundColor = [UIColor whiteColor];
@@ -54,6 +57,13 @@
     
     [backBtn addTarget:self action:@selector(clickBack:) forControlEvents:UIControlEventTouchUpInside];
     
+    CGFloat titleLabWidth = 200;
+    HGHbaseUILabel *titleLab = [[HGHbaseUILabel alloc]initWithFrame:CGRectMake((MAINVIEWWIDTH-titleLabWidth)/2, 5, titleLabWidth, 40)];
+    titleLab.text = @"账号绑定";
+    [self.imageView addSubview:titleLab];
+    titleLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:30];
+    titleLab.textAlignment = NSTextAlignmentCenter;
+    titleLab.textColor = [UIColor colorWithRed:255/255.0 green:183/255.0 blue:40/255.0 alpha:1];
     
     CGFloat uilayerX = (MAINVIEWWIDTH - TFWIDTH)/2;
     HGHbaseUITextField *phoneTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, 50, TFWIDTH, TFHEIGHT)];
@@ -74,7 +84,7 @@
     [codeBtn addTarget:self action:@selector(getCodeClick:) forControlEvents:UIControlEventTouchUpInside];
     
     HGHbaseUITextField *pwdTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, codeTF.baseBottom+DISTANCE2, TFWIDTH, TFHEIGHT)];
-//    pwdTF.backgroundColor = [UIColor grayColor];
+    pwdTF.secureTextEntry = YES;
     [self.imageView addSubview:pwdTF];
 //    self.pwdTF = pwdTF;
     HGHbaseUIButton *bindBtn = [[HGHbaseUIButton alloc]initWithFrame:CGRectMake(uilayerX, codeTF.baseBottom+DISTANCE2, TFWIDTH, TFHEIGHT)];
@@ -92,31 +102,71 @@
 
 -(void)clickBack:(UIButton *)sender
 {
-    [HGHResponse responseSuccess:self.userInfo];
+    
     [self.imageView removeFromSuperview];
     [[HGHMainView shareInstance].baseView removeFromSuperview];
+    
+    if (![self.pushedBy isEqualToString:@"accountCenter"]) {
+        [HGHResponse responseSuccess:self.userInfo];
+    }
+    
 }
 
 //获取验证码事件
 -(void)getCodeClick:(UIButton *)sender
 {
     NSString *phoneNO = self.phoneTF.text;
-    [self checkoutGetCodeWithPhoneNO:phoneNO];
+    BOOL isPhoneNO = [self checkoutGetCodeWithPhoneNO:phoneNO];
+    
+    if (isPhoneNO) {
+        __block int timeout = 10; //倒计时时间
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+        dispatch_source_set_timer(timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+        dispatch_source_set_event_handler(timer, ^{
+            if(timeout <= 0)
+                { //倒计时结束，关闭
+                    dispatch_source_cancel(timer);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        sender.userInteractionEnabled = YES;
+                        sender.backgroundColor = [UIColor whiteColor];
+                        [sender setTitle:@"获取验证码" forState:UIControlStateNormal];
+                    });
+                }
+            else
+                {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    sender.userInteractionEnabled = NO;
+                    sender.backgroundColor = [UIColor lightGrayColor];
+                    [sender setTitle:[NSString stringWithFormat:@"%ds",timeout] forState:UIControlStateNormal];
+                });
+                
+                timeout--;
+                
+                }
+        });
+        dispatch_resume(timer);
+    }
 }
--(void)checkoutGetCodeWithPhoneNO:(NSString *)phoneNO
+-(BOOL)checkoutGetCodeWithPhoneNO:(NSString *)phoneNO
 {
     if (![HGHregular regularPhoneNO:phoneNO]) {
-        //请输入正确的手机号
-        return;
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入正确的手机号"];
+        return NO;
     }
     [self getCodeRequestWithPhoneNO:phoneNO];
+    return YES;
 }
 
 -(void)getCodeRequestWithPhoneNO:(NSString *)phoneNO
 {
     [HGHFunctionHttp HGHGetCaptchaPhoneNO:phoneNO action:@"bind" ifSuccess:^(id  _Nonnull response) {
         if ([response[@"ret"] integerValue]==0) {
-            //发送验证码成功
+            if ([response[@"ret"] integerValue]==0) {
+                //fas 验证码成功
+            }else{
+                [HGHAlertview showAlertViewWithMessage:response[@"msg"]];
+            }
         }
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"error=%@",error);
@@ -134,11 +184,11 @@
 -(void)checkoutBindWithPhoneNO:(NSString *)phoneNO code:(NSString *)code
 {
     if (code.length<1) {
-        //请输入验证码
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入验证码"];
         return;
     }
     if (![HGHregular regularPhoneNO:phoneNO]) {
-        //请输入正确的y手机号
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入正确的手机号"];
         return;
     }
     [self bindRequestWithPhoneNO:phoneNO code:code];
@@ -150,7 +200,11 @@
     __weak __typeof__(self) weakSelf = self;
     [HGHFunctionHttp HGHBindPwd:@"" code:code phoneNO:phoneNO userID:userID ifSuccess:^(id  _Nonnull response) {
         if ([response[@"ret"] integerValue]==0) {
-            [HGHResponse responseSuccess:weakSelf.userInfo];
+            [[HGHMainView shareInstance].baseView removeFromSuperview];
+            if (![weakSelf.pushedBy isEqualToString:@"accountCenter"]) {
+                [HGHResponse responseSuccess:weakSelf.userInfo];
+            }
+            
         }else{
             [HGHAlertview showAlertViewWithMessage:response[@"msg"]];
         }
@@ -162,6 +216,15 @@
 //今日不再提示
 -(void)notnoticeToday:(UIButton *)sender
 {
+//    hghpandastodaynotnotice
+    NSDate *clickDate = [NSDate date];
+    NSTimeInterval clickSec = clickDate.timeIntervalSince1970;
+    NSString *clickTime = [NSString stringWithFormat:@"%f",clickSec];
+    [[NSUserDefaults standardUserDefaults] setObject:clickTime forKey:@"hghpandastodaynotnotice"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
     
+    [self.imageView removeFromSuperview];
+    [[HGHMainView shareInstance].baseView removeFromSuperview];
+    [HGHResponse responseSuccess:self.userInfo];
 }
 @end

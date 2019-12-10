@@ -17,4 +17,6 @@
 #define TFHEIGHT [HGHUIConfig TFHeight]
 #define DISTANCE1 [HGHUIConfig DistanceHeight1]
 #define DISTANCE2 [HGHUIConfig DistanceHeight2]
+//AccountCenterHeight
+#define ACCOUNTCENTERHEIGHT [HGHUIConfig AccountCenterHeight]
 #endif /* HGHPandas_pch */

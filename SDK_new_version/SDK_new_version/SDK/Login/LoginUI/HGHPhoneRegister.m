@@ -18,6 +18,8 @@
 #import "HGHAccountRegister.h"
 #import "HGHPhoneLogin.h"
 #import "HGHregular.h"
+#import "HGHShowLogView.h"
+#import "HGHbaseUILabel.h"
 @implementation HGHPhoneRegister
 
 +(instancetype)shareInstance
@@ -49,6 +51,15 @@
     //    backBtn.backgroundColor = [UIColor redColor];
         [backBtn setImage:[UIImage imageNamed:@"hgh_goback.png"] forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(clickBack:) forControlEvents:UIControlEventTouchUpInside];
+    
+    CGFloat titleLabWidth = 200;
+    HGHbaseUILabel *titleLab = [[HGHbaseUILabel alloc]initWithFrame:CGRectMake((MAINVIEWWIDTH-titleLabWidth)/2, 5, titleLabWidth, 40)];
+    titleLab.text = @"手机注册";
+    [self.imageView addSubview:titleLab];
+    titleLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:30];
+    titleLab.textAlignment = NSTextAlignmentCenter;
+    titleLab.textColor = [UIColor colorWithRed:255/255.0 green:183/255.0 blue:40/255.0 alpha:1];
+    
         CGFloat uilayerX = (MAINVIEWWIDTH - TFWIDTH)/2;
         HGHbaseUITextField *phoneTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, 50, TFWIDTH, TFHEIGHT)];
         phoneTF.placeholder = @"手机号";
@@ -69,6 +80,7 @@
         
         HGHbaseUITextField *pwdTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, codeTF.baseBottom+DISTANCE1, TFWIDTH, TFHEIGHT)];
     pwdTF.placeholder = @"密码";
+    pwdTF.secureTextEntry = YES;
         [self.imageView addSubview:pwdTF];
         self.pwdTF = pwdTF;
         
@@ -112,7 +124,36 @@
 -(void)getCodeClick:(UIButton *)sender
 {
     NSString *phoneNO = self.phoneTF.text;
-    [self checkoutCodePhoneNO:phoneNO];
+    
+    if ([self checkoutCodePhoneNO:phoneNO]) {
+        __block int timeout = 10; //倒计时时间
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+        dispatch_source_set_timer(timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+        dispatch_source_set_event_handler(timer, ^{
+            if(timeout <= 0)
+                { //倒计时结束，关闭
+                    dispatch_source_cancel(timer);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        sender.userInteractionEnabled = YES;
+                        sender.backgroundColor = [UIColor whiteColor];
+                        [sender setTitle:@"获取验证码" forState:UIControlStateNormal];
+                    });
+                }
+            else
+                {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    sender.userInteractionEnabled = NO;
+                    sender.backgroundColor = [UIColor lightGrayColor];
+                    [sender setTitle:[NSString stringWithFormat:@"%ds",timeout] forState:UIControlStateNormal];
+                });
+                
+                timeout--;
+                
+                }
+        });
+        dispatch_resume(timer);
+    }
 }
 //手机注册按钮事件
 -(void)registerClick:(UIButton *)sender
@@ -140,20 +181,25 @@
 }
 
 //获取验证码检测
--(void)checkoutCodePhoneNO:(NSString *)phoneNO
+-(BOOL)checkoutCodePhoneNO:(NSString *)phoneNO
 {
     if (![HGHregular regularPhoneNO:phoneNO]) {
-        //请输入正确的手机号
-        return;
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入正确的手机号"];
+        return NO;
     }
     [self getCodeRequest:phoneNO];
+    return YES;
 }
 
 -(void)getCodeRequest:(NSString *)phoneNO
 {
     [HGHFunctionHttp HGHGetCaptchaPhoneNO:phoneNO action:@"register" ifSuccess:^(id  _Nonnull response) {
         NSLog(@"register code response=%@",response);
-            //验证码发送成功
+        if ([response[@"ret"] integerValue]==0) {
+            //发送验证码成功
+        }else{
+            [HGHAlertview showAlertViewWithMessage:[response objectForKey:@"msg"]];
+        }
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"error=%@",error);
     }];
@@ -165,15 +211,15 @@
 -(void)checkoutRegisterPhoneNo:(NSString*)phoneNO code:(NSString *)code pwd:(NSString *)pwd
 {
     if (code.length<1) {
-        //请输入验证码
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入验证码"];
         return;
     }
     if (![HGHregular regularPhoneNO:phoneNO]) {
-        //请输入正确的手机号
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"请输入正确的手机号"];
         return;
     }
     if (![HGHregular regularPassword:pwd]) {
-        //密码应在8-16位数字字母组合
+        [[HGHShowLogView shareInstance] showLogsWithMsg:@"密码应是8-16位数字字母组合"];
         return;
     }
     [self phoneRegisterRequestWithPhoneNO:phoneNO code:code pwd:pwd];
@@ -185,8 +231,11 @@
         NSLog(@"phone register response=%@",response);
         if ([response[@"ret"] intValue]==0) {
             NSLog(@"成功");
+            [[NSUserDefaults standardUserDefaults] setObject:phoneNO forKey:@"phonehghpandasphoneno"];
+            [[NSUserDefaults standardUserDefaults] setObject:pwd forKey:@"phonehghpandaspwd"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+//            [HGHTools removeViews:[HGHMainView shareInstance].baseView];
             [HGHResponse loginsuccessWithUserData:response logintype:@"1" type:@"register"];
-            [HGHTools removeViews:[HGHMainView shareInstance].baseView];
         }else{
             NSString *msg = response[@"msg"];
             [HGHAlertview showAlertViewWithMessage:msg];

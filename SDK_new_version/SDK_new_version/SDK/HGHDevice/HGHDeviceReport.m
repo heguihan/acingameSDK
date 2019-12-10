@@ -10,9 +10,9 @@
 #import "HGHDevice.h"
 #import "HGHTools.h"
 //#import "HGHConfig.h"
-//#import "HGHDMHttp.h"
+#import "HGHDMHttp.h"
 #import "HGHExchange.h"
-#import "HGHHttpRequest.h"
+//#import "HGHHttpRequest.h"
 @implementation HGHDeviceReport
 
 +(void)HGHreportDeviceInfo:(NSDictionary *)deviceInfo ename:(NSString *)ename
@@ -68,8 +68,8 @@
     }
     NSLog(@"dict=%@",dict);
     NSString *dmurl = @"http://dm.acing.com/api/reports";
-    [HGHHttpRequest POSTNEW:dmurl paramString:dict ifSuccess:^(id  _Nonnull response) {
-        NSLog(@"response=%@",response);
+    [HGHDMHttp POSTNEW:dmurl paramString:dict ifSuccess:^(id  _Nonnull response) {
+        NSLog(@"dm response=%@",response);
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"xxxx");
     }];

@@ -14,9 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)currentChannelID;
 +(NSString *)currentAppID;
 +(NSString *)currentAppKey;
-+(NSString *)renyunAppKey;
++(NSString *)reyunAppKey;
 +(NSString *)dmAppID;
 +(NSString *)dmAppKey;
++(NSString *)SDKVersion;
 @end
 
 NS_ASSUME_NONNULL_END

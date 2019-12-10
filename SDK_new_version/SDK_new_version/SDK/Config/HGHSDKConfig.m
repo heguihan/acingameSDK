@@ -24,10 +24,10 @@
     NSDictionary *dict = [self GetConfig];
     return dict[@"appKey"];
 }
-+(NSString *)renyunAppKey
++(NSString *)reyunAppKey
 {
     NSDictionary *dict = [self GetConfig];
-    return dict[@"renyunKey"];
+    return dict[@"reyunKey"];
 }
 +(NSString *)dmAppID
 {
@@ -44,5 +44,9 @@
 {
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HGHPandas" ofType:@"plist"]];
     return dic;
+}
++(NSString *)SDKVersion
+{
+    return @"V1.0.0";
 }
 @end

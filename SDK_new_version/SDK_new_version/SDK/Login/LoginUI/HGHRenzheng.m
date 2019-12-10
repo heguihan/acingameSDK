@@ -19,6 +19,7 @@
 #import "HGHbaseUILabel.h"
 #import "HGHbaseUIImageView.h"
 #import "HGHregular.h"
+#import "HGHShowLogView.h"
 @implementation HGHRenzheng
 +(instancetype)shareInstance
 {
@@ -56,8 +57,16 @@
     [backBtn setImage:[UIImage imageNamed:@"hgh_close.png"] forState:UIControlStateNormal];
 //    backBtn.backgroundColor = [UIColor redColor];        [backBtn setImage:[UIImage imageNamed:@"hgh_goback.png"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(clickBack:) forControlEvents:UIControlEventTouchUpInside];
-    CGFloat uilayerX = (MAINVIEWWIDTH - TFWIDTH)/2;
     
+    CGFloat titleLabWidth = 200;
+    HGHbaseUILabel *titleLab = [[HGHbaseUILabel alloc]initWithFrame:CGRectMake((MAINVIEWWIDTH-titleLabWidth)/2, 5, titleLabWidth, 40)];
+    titleLab.text = @"实名认证";
+    [self.imageView addSubview:titleLab];
+    titleLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:30];
+    titleLab.textAlignment = NSTextAlignmentCenter;
+    titleLab.textColor = [UIColor colorWithRed:255/255.0 green:183/255.0 blue:40/255.0 alpha:1];
+    
+    CGFloat uilayerX = (MAINVIEWWIDTH - TFWIDTH)/2;
     HGHbaseUILabel *topUserLab = [[HGHbaseUILabel alloc]initWithFrame:CGRectMake(uilayerX, backBtn.baseBottom+DISTANCE1, TFWIDTH, 12)];
     topUserLab.font = [UIFont systemFontOfSize:10];
     [self.imageView addSubview:topUserLab];
@@ -83,10 +92,12 @@
     HGHbaseUITextField *userTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, topLab.baseBottom+DISTANCE1/2, TFWIDTH, TFHEIGHT)];
     self.userTF = userTF;
     userTF.placeholder = @"真实姓名:请输入你身份证上对应的名字";
+    [userTF setFont:[UIFont systemFontOfSize:13]];
     [self.imageView addSubview:userTF];
     
     HGHbaseUITextField *idcardTF = [[HGHbaseUITextField alloc]initWithFrame:CGRectMake(uilayerX, userTF.baseBottom+DISTANCE1, TFWIDTH, TFHEIGHT)];
     self.idcardTF = idcardTF;
+    [idcardTF setFont:[UIFont systemFontOfSize:13]];
     idcardTF.placeholder = @"身份证号码:请输入你的二代身份证号码";
     [self.imageView addSubview:idcardTF];
     
@@ -111,9 +122,12 @@
 
 -(void)clickBack:(UIButton *)sender
 {
-    [HGHResponse responseSuccess:self.userInfo];
     [self.imageView removeFromSuperview];
     [[HGHMainView shareInstance].baseView removeFromSuperview];
+    if (![self.pushedBy isEqualToString:@"accountCenter"]) {
+        [HGHResponse responseSuccess:self.userInfo];
+    }
+    
 }
 //开始认证
 -(void)renzhengNow:(UIButton *)sender
@@ -140,7 +154,11 @@
     __weak __typeof__(self) weakSelf = self;
     [HGHFunctionHttp HGHRenzhengWithUserName:realName idCardNumber:idCardNumber ifSuccess:^(id  _Nonnull response) {
         if ([response[@"ret"] integerValue]==0) {
-            [HGHResponse responseSuccess:weakSelf.userInfo];
+            [[HGHMainView shareInstance].baseView removeFromSuperview];
+            if (![weakSelf.pushedBy isEqualToString:@"accountCenter"]) {
+                [HGHResponse responseSuccess:weakSelf.userInfo];
+            }
+            
         }else{
             [HGHAlertview showAlertViewWithMessage:response[@"msg"]];
         }

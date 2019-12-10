@@ -11,9 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HGHUserInfo : NSObject
-@property(nonatomic,strong)NSString *ID;
-@property(nonatomic,strong)NSString *deviceID;
-@property(nonatomic,strong)NSString *opType;
+@property(nonatomic,strong)NSString *opType; //触发事件
 @property(nonatomic,strong)NSString *roleID;
 @property(nonatomic,strong)NSString *roleLevel;
 @property(nonatomic,strong)NSString *roleName;

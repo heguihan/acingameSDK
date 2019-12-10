@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(CGFloat)TFHeight;
 +(CGFloat)DistanceHeight1;
 +(CGFloat)DistanceHeight2;
++(CGFloat)AccountCenterHeight;
 @end
 
 NS_ASSUME_NONNULL_END
